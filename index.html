@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="description" content="Agence Lanzafame Presse — relations presse et communication culturelle. Musique classique, opéra, danse et spectacle vivant. Région Sud · National · International.">
+<title>Lanzafame — Relations presse et communication</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Playfair+Display:wght@700;800;900&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────
+   LANZAFAME — Relations presse & communication
+   Reproduction fidèle de la version "lanzafame-site 2"
+   Type : Cormorant Garamond + Geist Mono
+   Palette : crème / parchemin + terracotta + or + encre chaude
+   Affichage : carte centrée (max 1100px) avec ombre douce
+   ───────────────────────────────────────────── */
+:root{
+  color-scheme:light only;
+  --ink:#1c1814;
+  --warm-dark:#2e2720;
+  --parchment:#f2ead8;
+  --cream:#faf6ee;
+  --sand:#e8dcc8;
+  --sand-mid:#d4c4a8;
+  --terracotta:#c4785a;
+  --terra-soft:#e8c4b0;
+  --terra-pale:#f5e8e0;
+  --gold:#C4A84F;
+  --gold-warm:#d4b86a;
+  --gold-pale:#f0e4c0;
+  --gray-warm:#8a7e72;
+  --page-bg:#ece3d2;
+  --font-serif:'Cormorant Garamond',Georgia,serif;
+  --font-mono:'Geist Mono',ui-monospace,monospace;
+  --font-mark:'Playfair Display',Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--page-bg);
+  color:var(--ink);
+  font-family:var(--font-serif);
+  font-weight:300;line-height:1.6;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  -webkit-text-size-adjust:100%;forced-color-adjust:none;
+}
+
+/* ── CARTE CENTRÉE ── */
+.site-wrapper{
+  max-width:1100px;margin:0 auto;background:var(--cream);
+  box-shadow:0 0 80px rgba(28,24,20,.14);min-height:100vh;
+}
+
+/* ── ROUTAGE PAGES ── */
+.page{display:none;animation:pageIn .35s ease both;}
+.page.active{display:block;}
+@keyframes pageIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 2.5rem;background:rgba(250,246,238,.94);
+  backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid var(--sand);
+}
+.nav-logo{display:flex;align-items:center;text-decoration:none;gap:.1rem;}
+.nav-mark{
+  font-family:var(--font-mark);font-weight:900;font-style:normal;
+  color:var(--gold);font-size:2.05rem;line-height:1;
+}
+.nav-links{display:flex;align-items:center;gap:0;list-style:none;}
+.nav-links li a{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gray-warm);text-decoration:none;
+  padding:.45rem 1.1rem;border-left:1px solid var(--sand);transition:color .2s;
+  display:flex;align-items:center;gap:.4rem;
+}
+.nav-links li:first-child a{border-left:none;}
+.nav-links li a:hover{color:var(--ink);}
+.nav-links li a.active{color:var(--ink);border-bottom:2px solid var(--terracotta);}
+.nav-pro{
+  background:var(--warm-dark)!important;color:var(--parchment)!important;
+  transition:background .2s!important;
+}
+.nav-pro:hover{background:var(--terracotta)!important;}
+
+/* ── EN-TÊTE DE PAGE ── */
+.page-content{position:relative;z-index:1;min-height:70vh;}
+.page-header{
+  padding:3rem 2.5rem 2rem;border-bottom:1px solid var(--sand);
+  display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;
+  background:linear-gradient(160deg,#f8edd0 0%,#edcf98 100%);
+}
+.page-eyebrow{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--terracotta);margin-bottom:.8rem;
+}
+.page-title{
+  font-size:4.5rem;font-weight:300;line-height:.95;
+  letter-spacing:-.02em;color:var(--ink);
+}
+.page-title em{font-style:italic;color:var(--gold);}
+.page-header-right{
+  font-family:var(--font-mono);font-size:.57rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gray-warm);text-align:right;line-height:1.9;
+}
+
+/* ── HERO ── */
+.hero{min-height:70vh;display:grid;grid-template-columns:1fr 1fr;}
+.hero-left{
+  padding:3.5rem 2.5rem 3rem;display:flex;flex-direction:column;
+  justify-content:space-between;border-right:1px solid var(--sand);
+}
+.hero-eyebrow{
+  font-family:var(--font-mono);font-size:.57rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gray-warm);margin-bottom:3rem;line-height:1.7;
+}
+.hero-logo{width:78%;max-width:340px;height:auto;}
+.hero-bottom{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:2rem;padding-top:3rem;
+}
+.hero-desc{max-width:300px;font-size:1.05rem;color:var(--ink);line-height:1.75;opacity:.78;}
+.hero-cta{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--ink);text-decoration:none;
+  border-bottom:1px solid var(--ink);padding-bottom:2px;white-space:nowrap;
+  flex-shrink:0;cursor:pointer;transition:color .2s,border-color .2s,gap .2s;
+  display:inline-flex;align-items:center;gap:.45rem;
+}
+.hero-cta:hover{color:var(--terracotta);border-color:var(--terracotta);gap:.8rem;}
+.hero-right{background:#f5e8d0;position:relative;overflow:hidden;display:flex;flex-direction:column;}
+.hero-right::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 40% 35%,#fdf6ee 0%,#f5e4cc 45%,#ecd0b8 75%,#e4c4b0 100%);
+}
+
+/* ── CARROUSEL "ACTU DU MOIS" ── */
+.carousel-header{
+  position:relative;z-index:2;
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--terracotta);font-weight:500;
+  padding:.85rem 1.5rem;background:rgba(255,255,255,.95);
+  border-bottom:1px solid var(--sand);
+}
+.carousel-body{position:relative;overflow:hidden;flex:1;z-index:1;min-height:0;}
+.carousel-track{display:flex;height:100%;transition:transform .55s cubic-bezier(.5,.1,.25,1);will-change:transform;}
+.carousel-slide{min-width:16.6667%;flex-shrink:0;position:relative;height:100%;overflow:hidden;}
+.carousel-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.carousel-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.5rem 1.4rem;
+  background:linear-gradient(to top,rgba(20,15,10,.9) 0%,rgba(20,15,10,.55) 55%,transparent 100%);
+}
+.carousel-tag{
+  font-family:var(--font-mono);font-size:.53rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-warm);display:block;margin-bottom:.35rem;
+}
+.carousel-title{font-size:1.15rem;font-weight:400;color:#fff;line-height:1.25;margin-bottom:.25rem;}
+.carousel-date{font-family:var(--font-mono);font-size:.55rem;color:rgba(255,255,255,.78);letter-spacing:.04em;}
+.carousel-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.65);border:none;width:32px;height:32px;
+  cursor:pointer;font-size:.9rem;color:var(--ink);z-index:3;transition:background .2s;
+}
+.carousel-btn:hover{background:#fff;}
+.carousel-prev{left:.7rem;}
+.carousel-next{right:.7rem;}
+.carousel-dots{position:absolute;z-index:3;top:1rem;right:1.2rem;display:flex;gap:6px;}
+.carousel-dot{
+  width:7px;height:7px;border-radius:50%;border:none;cursor:pointer;padding:0;
+  background:rgba(28,24,20,.25);transition:background .2s,transform .2s;
+}
+.carousel-dot.active{background:var(--terracotta);transform:scale(1.15);}
+
+/* ── RUBRIQUES ── */
+.rubriques{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--sand);}
+.rubrique-card{
+  padding:2.6rem 2rem;border-right:1px solid var(--sand);color:var(--ink);
+  transition:background .25s;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:space-between;
+  min-height:190px;cursor:pointer;
+}
+.rubrique-card:last-child{border-right:none;}
+.rubrique-card:nth-child(1){background:linear-gradient(160deg,#f8edd0 0%,#edcf98 100%);}
+.rubrique-card:nth-child(2){background:linear-gradient(160deg,#f8ecd0 0%,#ebcc98 100%);}
+.rubrique-card:nth-child(3){background:linear-gradient(160deg,#f4e5c4 0%,#e4c480 100%);}
+.rubrique-card:nth-child(1):hover{background:linear-gradient(160deg,#f0d8b0 0%,#ddb870 100%);}
+.rubrique-card:nth-child(2):hover{background:linear-gradient(160deg,#ecd4b0 0%,#d8b468 100%);}
+.rubrique-card:nth-child(3):hover{background:linear-gradient(160deg,#e8ce98 0%,#ccaa50 100%);}
+.rubrique-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--terracotta);transform:scaleX(0);transform-origin:left;transition:transform .35s;
+}
+.rubrique-card:hover::before{transform:scaleX(1);}
+.rubrique-num{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;color:var(--terracotta);margin-bottom:1.2rem;}
+.rubrique-name{font-size:1.55rem;font-weight:400;line-height:1.15;margin-bottom:1rem;color:var(--ink);}
+.rubrique-arrow{
+  font-family:var(--font-mono);font-size:.58rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--gray-warm);
+  display:inline-flex;align-items:center;gap:.4rem;transition:gap .2s,color .2s;
+}
+.rubrique-card:hover .rubrique-arrow{color:var(--terracotta);gap:.75rem;}
+
+/* ── PROJETS ── */
+.season-switch{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:1.6rem;padding-bottom:1.5rem;border-bottom:1px solid var(--sand);}
+.season-switch-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-warm);margin-right:.3rem;}
+.season-btn{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-warm);background:transparent;border:1px solid var(--sand-mid);padding:.55rem 1.2rem;cursor:pointer;transition:color .2s,border-color .2s,background .2s;line-height:1.2;text-align:left;}
+.season-btn:hover{color:var(--ink);border-color:var(--ink);}
+.season-btn.active{background:var(--warm-dark);color:var(--parchment);border-color:var(--warm-dark);}
+.season-btn .sb-tag{display:block;font-size:.48rem;letter-spacing:.18em;opacity:.55;margin-top:.2rem;}
+.filters{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem;}
+.filter-btn{
+  font-family:var(--font-mono);font-size:.58rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gray-warm);background:transparent;
+  border:1px solid var(--sand-mid);padding:.45rem 1rem;cursor:pointer;transition:all .2s;
+}
+.filter-btn:hover{color:var(--ink);border-color:var(--ink);}
+.filter-btn.active{background:var(--warm-dark);color:var(--parchment);border-color:var(--warm-dark);}
+.projets-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--sand);}
+.projet-card{
+  border-right:1px solid var(--sand);border-bottom:1px solid var(--sand);
+  cursor:pointer;transition:background .25s;overflow:hidden;position:relative;
+}
+.projet-card:nth-child(3n){border-right:none;}
+.projet-card:hover{background:var(--terra-pale);}
+.projet-card::before{
+  content:'';position:absolute;top:0;left:0;width:2px;height:0;
+  background:var(--terracotta);transition:height .35s;z-index:3;
+}
+.projet-card:hover::before{height:100%;}
+.projet-img{width:100%;aspect-ratio:1/1;position:relative;overflow:hidden;background:var(--parchment);}
+.projet-card[data-cat="disque"] .projet-img{aspect-ratio:1/1;}
+.projet-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.projet-img.is-logo{background:var(--parchment);}
+.projet-img.is-logo img{position:absolute;inset:0;margin:auto;width:70%;height:70%;object-fit:contain;}
+.img-credit{position:absolute;bottom:.5rem;left:.5rem;z-index:3;display:inline-flex;align-items:center;max-width:19px;height:19px;overflow:hidden;border-radius:10px;background:rgba(20,15,10,.5);color:#fff;font-family:var(--font-mono);font-size:.5rem;letter-spacing:.06em;white-space:nowrap;transition:max-width .4s ease,background .25s;backdrop-filter:blur(2px);}
+.img-credit::before{content:'\00A9';display:flex;align-items:center;justify-content:center;width:19px;height:19px;flex:none;font-size:.62rem;}
+.img-credit .ic-txt{padding-right:.65rem;}
+.projet-card:hover .img-credit,.img-credit.expanded{max-width:260px;background:rgba(20,15,10,.82);}
+.projet-img.placeholder{
+  background:
+    repeating-linear-gradient(135deg,rgba(196,120,90,.08) 0,rgba(196,120,90,.08) 1px,transparent 1px,transparent 13px),
+    linear-gradient(160deg,#f5e4cc,#e8c4b0);
+}
+.projet-img.placeholder::after{
+  content:attr(data-label);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--font-mono);font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gray-warm);border:1px dashed var(--sand-mid);padding:.5rem .9rem;
+  background:rgba(250,246,238,.75);white-space:nowrap;
+}
+.projet-info{padding:1.3rem 1.5rem 1.6rem;}
+.projet-tag{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.5rem;}
+.projet-name{font-size:1.15rem;font-weight:400;line-height:1.25;margin-bottom:.5rem;color:var(--ink);}
+.projet-detail{font-family:var(--font-mono);font-size:.57rem;color:var(--gray-warm);letter-spacing:.04em;}
+.projet-desc{font-family:var(--font-serif);font-size:.95rem;line-height:1.45;color:var(--ink);margin:0 0 .7rem;text-wrap:pretty;}
+.projet-cie{font-family:var(--font-serif);font-style:italic;font-size:1rem;color:var(--gray-warm);margin:-.25rem 0 .5rem;line-height:1.3;}
+.subfilters{display:none;flex-wrap:wrap;gap:.5rem;margin:-1.2rem 0 2.4rem;}
+.subfilters.show{display:flex;}
+.subfilter-btn{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-warm);background:transparent;border:1px solid var(--sand-mid);padding:.4rem .9rem;cursor:pointer;transition:all .2s;}
+.subfilter-btn:hover{color:var(--ink);border-color:var(--ink);}
+.subfilter-btn.active{background:var(--terracotta);color:#fff;border-color:var(--terracotta);}
+.subfilter-btn.is-now:not(.active){border-color:var(--terracotta);color:var(--terracotta);}
+.subfilter-btn.is-now::before{content:'●';font-size:.5em;margin-right:.45em;vertical-align:middle;color:var(--terracotta);}
+.subfilter-btn.is-now.active::before{color:#fff;}
+.cat-note{display:none;margin:2.4rem 0 0;padding:1.1rem 1.4rem;border:1px solid var(--sand-mid);border-left:3px solid var(--terracotta);background:var(--cream);font-family:var(--font-mono);font-size:.62rem;letter-spacing:.08em;color:var(--warm-dark);}
+.projet-credit{font-family:var(--font-mono);font-size:.53rem;letter-spacing:.06em;color:var(--terracotta);margin-top:.55rem;}
+.projet-pastille{display:inline-block;margin-top:.7rem;padding:.3rem .7rem;border:1px solid var(--terracotta);border-radius:999px;font-family:var(--font-mono);font-size:.52rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terracotta);}
+.pastilles{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem;}
+.pastilles .projet-pastille{margin-top:0;}
+#grid-months .month-block{margin-bottom:2.6rem;}
+#grid-months .month-block:last-child{margin-bottom:0;}
+.mb-head{display:flex;align-items:center;gap:.85rem;padding:.8rem 1.3rem;background:var(--cream);border:1px solid var(--sand);border-bottom:none;}
+.mb-name{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--warm-dark);}
+.mb-year{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.18em;color:var(--gray-warm);}
+.mb-now{margin-left:auto;font-family:var(--font-mono);font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--terracotta);padding:.25rem .6rem;border-radius:11px;}
+.mb-head.is-current{background:var(--terracotta);border-color:var(--terracotta);}
+.mb-head.is-current .mb-name,.mb-head.is-current .mb-year{color:#fff;}
+.mb-head.is-current .mb-now{background:#fff;color:var(--terracotta);}
+.mb-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--sand);}
+@media(max-width:640px){.mb-grid{grid-template-columns:1fr;}}
+.projet-card[data-url]{cursor:pointer;}
+.projet-card[data-url] .projet-name::after{content:' ↗';color:var(--terracotta);opacity:0;transition:opacity .2s;font-family:var(--font-mono);font-size:.7em;}
+.projet-card[data-url]:hover .projet-name::after{opacity:1;}
+
+/* ── AGENCE ── */
+.agence-layout{display:grid;grid-template-columns:.82fr 1.5fr;gap:4rem;padding:3.5rem 2.5rem;align-items:start;}
+.agence-side{align-self:start;}
+.agence-quote{font-family:var(--font-serif);font-style:italic;font-weight:300;font-size:1.3rem;line-height:1.45;color:var(--ink);margin:1.7rem 0 0;padding-left:1.1rem;border-left:2px solid var(--gold);}
+.agence-quote em{font-style:normal;color:var(--terracotta);}
+.agence-quote-mark{display:block;font-family:var(--font-serif);font-size:2.4rem;font-style:italic;color:var(--gold);line-height:.5;margin-bottom:.45rem;opacity:.8;}
+.agence-quote-end{margin-top:2.2rem;font-size:1.5rem;}
+.agence-side-rule{display:block;width:46px;height:3px;background:linear-gradient(to right,var(--terracotta),var(--gold));margin-bottom:1.4rem;}
+.agence-photo-wrap{position:relative;display:block;width:100%;max-width:225px;margin:1.4rem 0 0;}
+.agence-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:56% 20%;display:block;border:1px solid var(--sand-mid);}
+.agence-photo-wrap:hover .img-credit{max-width:260px;background:rgba(20,15,10,.82);}
+.agence-col-meta{font-family:var(--font-mono);font-size:.57rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-warm);margin-bottom:.5rem;}
+.agence-col-name{font-size:2rem;font-weight:400;margin-bottom:.15rem;color:var(--ink);line-height:1.05;}
+.agence-col-role{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;color:var(--terracotta);}
+.bio-lead{font-size:1.42rem;line-height:1.5;color:var(--ink);}
+.portrait-box{
+  width:100%;aspect-ratio:3/4;background:var(--parchment);border:1px solid var(--sand-mid);
+  display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;position:relative;overflow:hidden;
+  background-image:repeating-linear-gradient(135deg,rgba(196,120,90,.07) 0,rgba(196,120,90,.07) 1px,transparent 1px,transparent 13px);
+}
+.portrait-box::after{
+  content:'[ Portrait ]';position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);
+  font-family:var(--font-mono);font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-warm);
+}
+.portrait-box::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--terracotta),var(--gold));z-index:2;}
+.agence-mark-card{width:100%;aspect-ratio:3/4;margin-bottom:1.5rem;position:relative;overflow:hidden;border:1px solid var(--sand-mid);background:linear-gradient(160deg,#f8edd0 0%,#edcf98 100%);display:flex;align-items:center;justify-content:center;}
+.agence-mark-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--terracotta),var(--gold));z-index:2;}
+.agence-mark-card::after{content:'Relations presse';position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--warm-dark);opacity:.7;}
+.agence-mark{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--gold);font-size:11rem;line-height:1;opacity:.92;}
+.bio{font-size:1.18rem;font-weight:300;line-height:1.72;margin-bottom:1.5rem;color:var(--ink);}
+.bio em{font-style:italic;color:var(--terracotta);}
+.bio strong{font-weight:500;color:var(--ink);}
+.facts{margin-top:1.9rem;border-top:1px solid var(--sand);}
+.fact-row{display:flex;justify-content:space-between;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--sand);gap:1rem;}
+.fact-label{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-warm);}
+.fact-val{font-size:1rem;font-weight:300;color:var(--ink);text-align:right;}
+.fact-val a{color:var(--terracotta);text-decoration:none;}
+.quote-wrap{padding:0 2.5rem 3.5rem;}
+.quote-block{border:1px solid var(--sand-mid);padding:2.5rem 3rem;position:relative;background:var(--cream);}
+.quote-block::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--gold),var(--terracotta));}
+.quote-mark{font-family:var(--font-serif);font-size:4rem;font-style:italic;color:var(--gold);line-height:.7;display:block;margin-bottom:.8rem;opacity:.7;}
+.quote-text{font-size:1.5rem;font-weight:300;font-style:italic;line-height:1.5;color:var(--ink);}
+.quote-text em{font-style:normal;color:var(--terracotta);}
+
+/* ── CONTACT ── */
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;min-height:60vh;}
+.contact-left{
+  padding:3rem 2.5rem;background:linear-gradient(160deg,#f8edd0 0%,#f0d8b0 100%);
+  border-right:1px solid var(--sand);position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.contact-left-z{
+  position:absolute;right:-8%;bottom:-22%;font-family:var(--font-serif);font-style:italic;
+  font-weight:400;color:var(--gold);opacity:.1;font-size:26rem;line-height:1;pointer-events:none;
+}
+.contact-details{position:relative;z-index:1;}
+.contact-detail{padding:1.1rem 0;border-bottom:1px solid #d4c4a8;display:flex;flex-direction:column;gap:.3rem;}
+.contact-detail:last-child{border-bottom:none;}
+.c-label{font-family:var(--font-mono);font-size:.53rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray-warm);}
+.c-val{font-size:1.1rem;font-weight:300;color:var(--ink);text-decoration:none;transition:color .2s;}
+.c-val:hover{color:var(--terracotta);}
+.contact-right{padding:3rem 2.5rem;background:var(--cream);}
+.form-title{font-size:1.7rem;font-weight:300;margin-bottom:2rem;color:var(--ink);}
+.form-title em{font-style:italic;color:var(--terracotta);}
+.form-group{margin-bottom:1.6rem;}
+.form-label{font-family:var(--font-mono);font-size:.53rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-warm);display:block;margin-bottom:.5rem;}
+.form-input,.form-textarea{
+  width:100%;padding:.65rem 0;border:none;border-bottom:1px solid var(--sand-mid);
+  background:transparent;font-family:var(--font-serif);font-size:1.05rem;color:var(--ink);
+  outline:none;font-weight:300;transition:border-color .25s;
+}
+.form-input:focus,.form-textarea:focus{border-bottom-color:var(--terracotta);}
+.form-textarea{resize:none;height:96px;}
+.form-submit{
+  margin-top:.5rem;padding:.9rem 2.5rem;background:var(--warm-dark);color:var(--parchment);
+  font-family:var(--font-mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+  border:none;cursor:pointer;transition:background .25s,letter-spacing .25s;
+}
+.form-submit:hover{background:var(--terracotta);letter-spacing:.22em;}
+.form-success{display:none;padding:1rem 1.2rem;background:var(--gold-pale);border-left:3px solid var(--gold);font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;color:var(--ink);margin-bottom:1.5rem;}
+.form-success.show{display:block;}
+
+/* ── ESPACE PRESSE ── */
+.press-login{min-height:70vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#f8edd0 0%,#f0d8b0 60%,#e8c4a8 100%);padding:3rem 1.5rem;}
+.login-box{position:relative;background:var(--cream);padding:3.5rem;width:420px;max-width:92vw;border:1px solid var(--sand-mid);}
+.login-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--terracotta),var(--gold));}
+.login-eyebrow{font-family:var(--font-mono);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gray-warm);margin-bottom:1rem;}
+.login-title{font-size:2.2rem;font-weight:300;line-height:1.1;margin-bottom:2.5rem;color:var(--ink);}
+.login-title em{font-style:italic;color:var(--terracotta);}
+.login-input{width:100%;padding:.8rem 0;border:none;border-bottom:1px solid var(--sand-mid);background:transparent;font-family:var(--font-mono);font-size:.85rem;color:var(--ink);outline:none;margin-bottom:1.5rem;}
+.login-input:focus{border-bottom-color:var(--terracotta);}
+.login-error{font-family:var(--font-mono);font-size:.57rem;color:#a04040;margin-bottom:1rem;display:none;}
+.login-error.show{display:block;}
+.login-submit{width:100%;padding:1rem;background:var(--warm-dark);color:var(--parchment);font-family:var(--font-mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s;}
+.login-submit:hover{background:var(--terracotta);}
+.login-hint{display:block;text-align:center;margin-top:1.2rem;font-family:var(--font-mono);font-size:.54rem;letter-spacing:.1em;color:var(--gray-warm);}
+.ep-header-actions{display:flex;align-items:center;gap:1rem;}
+.ep-logout{font-family:var(--font-mono);font-size:.57rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--ink);padding:.5rem 1rem;cursor:pointer;transition:all .2s;}
+.ep-logout:hover{background:var(--ink);color:var(--parchment);}
+.ep-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--sand);}
+.ep-client{padding:2rem;border-right:1px solid var(--sand);border-bottom:1px solid var(--sand);display:flex;flex-direction:column;}
+.ep-client:nth-child(3n){border-right:none;}
+.ep-client-tag{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.4rem;}
+.ep-client-name{font-size:1.2rem;font-weight:400;margin-bottom:.3rem;color:var(--ink);}
+.ep-client-date{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.04em;color:var(--gray-warm);margin-bottom:1.1rem;}
+.ep-gal{position:fixed;inset:0;z-index:200;background:rgba(28,25,23,.94);display:none;padding:4vh 4vw;overflow:auto;}
+.ep-gal.show{display:block;}
+.ep-gal-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.6rem;}
+.ep-gal-title{color:#fff;font-size:1.1rem;font-weight:400;}
+.ep-gal-close{background:none;border:1px solid rgba(255,255,255,.35);color:#fff;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;padding:.5rem .9rem;cursor:pointer;}
+.ep-gal-close:hover{background:rgba(255,255,255,.12);}
+.ep-gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;}
+.ep-gal-item{margin:0;}
+.ep-gal-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
+.ep-gal-item figcaption{color:rgba(255,255,255,.72);font-family:var(--font-mono);font-size:.54rem;letter-spacing:.08em;padding:.45rem .1rem 0;}
+.ep-gal-item a{display:block;position:relative;}
+.ep-gal-item span{position:absolute;left:0;bottom:0;background:rgba(28,25,23,.8);color:#fff;font-family:var(--font-mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .6rem;}
+.ep-doclist{display:grid;gap:.5rem;max-width:640px;}
+.ep-doclist a{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 1.1rem;border:1px solid rgba(255,255,255,.28);color:#fff;text-decoration:none;font-size:.9rem;}
+.ep-doclist a:hover{background:rgba(255,255,255,.1);}
+.ep-doclist em{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.12em;text-transform:uppercase;font-style:normal;color:rgba(255,255,255,.6);}
+.ep-access{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.04em;color:var(--gray-warm);margin:.7rem 0 0;}
+.ep-access strong{color:var(--ink);font-weight:500;}
+.ep-client .ep-actions{margin-top:auto;}
+.ep-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:auto;padding-top:.4rem;}
+.ep-btn{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:transparent;border:1px solid var(--sand-mid);padding:.5rem .85rem;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;transition:all .2s;cursor:pointer;}
+.ep-btn:hover{border-color:var(--ink);}
+.ep-btn.primary{background:var(--warm-dark);color:var(--parchment);border-color:var(--warm-dark);}
+.ep-btn.primary:hover{background:var(--terracotta);border-color:var(--terracotta);}
+.ep-doc{display:flex;align-items:center;justify-content:space-between;padding:.65rem 0;border-bottom:1px solid var(--sand);font-family:var(--font-mono);font-size:.6rem;}
+.ep-doc:last-child{border-bottom:none;}
+.ep-doc a{color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:.4rem;transition:color .2s;}
+.ep-doc a:hover{color:var(--terracotta);}
+.ep-doc-type{color:var(--gray-warm);}
+.ep-contact-bar{padding:1.5rem 2rem;border-top:1px solid var(--sand);grid-column:1/-1;display:flex;gap:4rem;align-items:center;background:linear-gradient(160deg,#f8edd0 0%,#f0d8b0 100%);}
+.ep-clabel{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-warm);margin-bottom:.3rem;}
+.ep-cval{font-size:1rem;font-weight:300;color:var(--ink);text-decoration:none;}
+
+.ep-subscribe{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem 2rem;margin:0 0 2.6rem;padding:1.8rem 2rem;background:linear-gradient(160deg,#f8edd0 0%,#f0d8b0 100%);border:1px solid var(--sand-mid);}
+.ep-sub-eyebrow{font-family:var(--font-mono);font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.45rem;}
+.ep-sub-title{font-size:1.35rem;font-weight:300;color:var(--ink);line-height:1.2;max-width:30ch;}
+.ep-sub-form{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;}
+.ep-sub-input{padding:.72rem .95rem;border:1px solid var(--sand-mid);background:rgba(255,255,255,.65);font-family:var(--font-serif);font-size:1rem;color:var(--ink);outline:none;min-width:210px;transition:border-color .2s;}
+.ep-sub-input:focus{border-color:var(--terracotta);}
+.ep-sub-btn{padding:.78rem 1.5rem;background:var(--warm-dark);color:var(--parchment);font-family:var(--font-mono);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:background .2s,letter-spacing .2s;}
+.ep-sub-btn:hover{background:var(--terracotta);letter-spacing:.2em;}
+.ep-sub-success{display:none;width:100%;font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;color:var(--warm-dark);}
+.ep-sub-success.show{display:block;}
+/* ── FOOTER ── */
+footer{padding:1.6rem 2.5rem;border-top:1px solid var(--sand);display:flex;align-items:center;justify-content:space-between;gap:2rem;background:var(--parchment);}
+.footer-mark{font-family:var(--font-mark);font-size:1.95rem;font-weight:900;color:var(--gold);line-height:1;text-decoration:none;}
+.footer-left{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-warm);}
+.footer-links{display:flex;gap:2rem;}
+.footer-links a{font-family:var(--font-mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-warm);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--ink);}
+/* ── PAGES LÉGALES ── */
+.legal-wrap{max-width:820px;margin:0 auto;padding:1rem 0 2rem;}
+.legal-block{margin-bottom:2.6rem;}
+.legal-block:last-child{margin-bottom:0;}
+.legal-h{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta);margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:1px solid var(--sand);}
+.legal-block p{font-size:1.06rem;line-height:1.7;color:var(--ink);margin-bottom:.7rem;max-width:62ch;}
+.legal-block p:last-child{margin-bottom:0;}
+.legal-block a{color:var(--terracotta);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;}
+.legal-block a:hover{border-bottom-color:var(--terracotta);}
+.legal-block strong{font-weight:500;}
+.legal-meta{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.06em;color:var(--gray-warm);line-height:1.8;}
+.legal-updated{margin-top:3rem;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-warm);}
+
+/* ── SECTIONS ── */
+.section{padding:3rem 2.5rem;}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+.fade-up.visible{opacity:1;transform:none;}
+.fade-up.delay-1{transition-delay:.07s;}
+.fade-up.delay-2{transition-delay:.14s;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:920px){
+  nav{padding:1rem 1.4rem;}
+  .nav-links li a{padding:.4rem .7rem;font-size:.55rem;letter-spacing:.1em;}
+  .page-header{padding:2.5rem 1.4rem 1.8rem;flex-direction:column;align-items:flex-start;gap:1rem;}
+  .page-header-right{text-align:left;}
+  .hero{grid-template-columns:1fr;}
+  .hero-left{padding:2.5rem 1.4rem;border-right:none;border-bottom:1px solid var(--sand);}
+  .hero-logo{width:70%;}
+  .hero-right{min-height:64vh;}
+  .rubriques{grid-template-columns:1fr;}
+  .rubrique-card{border-right:none;border-bottom:1px solid var(--sand);}
+  .projets-grid{grid-template-columns:1fr 1fr;}
+  .projet-card:nth-child(3n){border-right:1px solid var(--sand);}
+  .projet-card:nth-child(2n){border-right:none;}
+  .agence-layout{grid-template-columns:1fr;gap:2.5rem;padding:2.5rem 1.4rem;}
+  .agence-side{position:static;}
+  .quote-wrap{padding:0 1.4rem 2.5rem;}
+  .contact-layout{grid-template-columns:1fr;}
+  .contact-left,.contact-right{padding:2.5rem 1.4rem;}
+  .section{padding:2.5rem 1.4rem;}
+  .ep-grid{grid-template-columns:1fr;}
+  .ep-client:nth-child(3n){border-right:1px solid var(--sand);}
+  .ep-contact-bar{flex-direction:column;gap:1.5rem;align-items:flex-start;}
+  footer{flex-direction:column;gap:1rem;text-align:center;}
+}
+@media(max-width:640px){
+  nav{flex-wrap:wrap;gap:.6rem;padding:.8rem 1rem;}
+  .nav-links{width:100%;justify-content:center;flex-wrap:wrap;border-top:1px solid var(--sand);padding-top:.5rem;}
+  .nav-links li a{padding:.45rem .6rem;font-size:.52rem;letter-spacing:.05em;gap:.3rem;}
+  .nav-pro svg{display:none;}
+  .hero-bottom{flex-direction:column;align-items:flex-start;gap:1.3rem;}
+  .projets-grid{grid-template-columns:1fr;}
+  .projet-card{border-right:none!important;}
+  .page-title{font-size:clamp(2.3rem,11vw,3.2rem);}
+  .agence-col-name{font-size:1.7rem;}
+  .bio-lead{font-size:1.2rem;}
+  .bio{font-size:1.07rem;}
+  .form-title,.login-title{font-size:1.5rem;}
+  .fact-row{flex-wrap:wrap;gap:.15rem;}
+  .fact-val{text-align:left;}
+  .ep-subscribe{padding:1.4rem 1.3rem;}
+  .ig-foot,.ep-doc{font-size:.58rem;}
+}
+</style>
+</head>
+<body>
+<div class="site-wrapper">
+
+<!-- ═══════════════════ ACCUEIL ═══════════════════ -->
+<div id="page-home" class="page active" data-screen-label="Accueil">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Relations presse &amp; communication culturelle<br>Musique classique · Danse · Spectacle vivant</p>
+      <img class="hero-logo" src="assets/logo-trans.png" alt="Lanzafame — Relations presse et communication">
+      <div class="hero-bottom">
+        <p class="hero-desc">Forte de plus de quinze ans d'expertise dans la musique classique, la danse et le spectacle vivant, j'accompagne artistes, ensembles, festivals… dans la construction de leur visibilité médiatique.</p>
+        <span class="hero-cta" onclick="showPage('projets')">Voir les projets →</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="carousel-header" id="carousel-header">Actu du mois</div>
+      <div class="carousel-body">
+        <div class="carousel-track" id="carousel-track"></div>
+        <button class="carousel-btn carousel-prev" onclick="prevSlide()" aria-label="Précédent">←</button>
+        <button class="carousel-btn carousel-next" onclick="nextSlide()" aria-label="Suivant">→</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rubriques">
+    <div class="rubrique-card" onclick="showPage('projets')">
+      <div><p class="rubrique-num">01</p><p class="rubrique-name">Projets<br><span data-season-label>2026–2027</span></p></div>
+      <span class="rubrique-arrow">Voir →</span>
+    </div>
+    <div class="rubrique-card" onclick="showPage('agence')">
+      <div><p class="rubrique-num">02</p><p class="rubrique-name">L'agence</p></div>
+      <span class="rubrique-arrow">Voir →</span>
+    </div>
+    <div class="rubrique-card" onclick="showPage('contact')">
+      <div><p class="rubrique-num">03</p><p class="rubrique-name">Contact<br>&amp; projet</p></div>
+      <span class="rubrique-arrow">Écrire →</span>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════ PROJETS ═══════════════════ -->
+<div id="page-projets" class="page" data-screen-label="Projets">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="page-eyebrow">01 — Actualités</p>
+        <h1 class="page-title">Projets<br><em data-season-label>2026–2027</em></h1>
+      </div>
+      <div class="page-header-right">Musique · Opéra<br>Danse · Disques</div>
+    </div>
+
+    <section class="section">
+      <div class="season-switch" id="season-switch"></div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="tous">Tous</button>
+        <button class="filter-btn" data-filter="saison">Saison</button>
+        <button class="filter-btn" data-filter="festival">Festival</button>
+        <button class="filter-btn" data-filter="disque">Disque</button>
+        <button class="filter-btn" data-filter="orchestre">Orchestre</button>
+        <button class="filter-btn" data-filter="danse">Danse</button>
+        <button class="filter-btn" data-filter="concours">Concours</button>
+        <button class="filter-btn" data-filter="theatre">Théâtre</button>
+        <button class="filter-btn" data-filter="conference">Conférence de presse</button>
+        <button class="filter-btn" data-filter="archives">Archives</button>
+      </div>
+      <div class="subfilters" id="disque-subfilters" data-cat="disque">
+        <button class="subfilter-btn active" data-sub="tout">Tout</button>
+        <button class="subfilter-btn" data-sub="rocamadour">Label Rocamadour</button>
+        <button class="subfilter-btn" data-sub="scala">Label Scala Music</button>
+        <button class="subfilter-btn" data-sub="artistes">Artistes</button>
+      </div>
+      <div class="subfilters" id="orchestre-subfilters" data-cat="orchestre">
+        <button class="subfilter-btn active" data-sub="tout">Tout</button>
+        <button class="subfilter-btn" data-sub="equilbey">Laurence Equilbey · Insula orchestra &amp; accentus</button>
+        <button class="subfilter-btn" data-sub="rhorer">Jérémie Rhorer · Le Cercle de l'Harmonie</button>
+        <button class="subfilter-btn" data-sub="delaforge">Camille Delaforge · Ensemble Il Caravaggio</button>
+        <button class="subfilter-btn" data-sub="ziouani">Zahia Ziouani · Divertimento</button>
+      </div>
+      <div class="subfilters" id="saison-subfilters" data-cat="saison">
+        <button class="subfilter-btn active" data-sub="tout">Tout</button>
+        <button class="subfilter-btn" data-sub="criee">Théâtre de La Criée</button>
+        <button class="subfilter-btn" data-sub="scala">La Scala Paris</button>
+        <button class="subfilter-btn" data-sub="insula">Insula orchestra · La Seine Musicale</button>
+        <button class="subfilter-btn" data-sub="proquartet">ProQuartet</button>
+        <button class="subfilter-btn" data-sub="croq">Les Dimanches Croq'Musique</button>
+      </div>
+      <div class="subfilters" id="archives-subfilters" data-cat="archives"></div>
+      <div class="subfilters" id="tous-subfilters" data-cat="tous"></div>
+      <div class="projets-grid" id="grid">
+        <div data-season="2026-2027" data-no-actu class="projet-card fade-up" data-cat="saison" data-sub="scala" data-url="https://www.lascala-paris.com">
+          <div class="projet-img"><img src="assets/saison-scala.jpg" alt="La Scala Paris — Saison 26/27"><span class="img-credit" title="© Bernard Martinez"><span class="ic-txt">Bernard Martinez</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">La Scala Paris — Saison 26/27</p>
+            <p class="projet-cie">dir. Frédéric Biessy</p>
+            <p class="projet-detail">Dir. de la musique : Rodolphe Bruneau-Boulmier · Paris</p>
+            <p class="projet-pastille">Septembre 2026 – juin 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" data-no-actu class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-url="https://proquartet.fr">
+          <div class="projet-img" style="background:#fff"><img src="assets/logo-proquartet.png" alt="Les 40 ans de ProQuartet — Centre Européen de Musique de Chambre" style="object-fit:contain;padding:12%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Les 40 ans de ProQuartet</p>
+            <p class="projet-cie">Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Saison 26/27 · Constellation · La Piccola Scala · Paris</p>
+            <p class="projet-pastille">Octobre 2026 – juin 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2026-10-07" data-actu-months="10" data-url="https://lascala-paris.fr/programmation/quartet-kairi/">
+          <div class="projet-img"><img src="assets/quartet-kairi-crop.png" alt="Quartet Kairi — ProQuartet à La Scala Paris" style="object-position:50% 30%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">ProQuartet s'installe à La Scala Paris</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Constellation · Quartet Kairi · La Piccola Scala · Takemitsu, Schubert, Xu Yi, Vasks</p>
+            <div class="pastilles">
+              <p class="projet-pastille">Mercredi 7 octobre 2026 · 19h15 · Quartet Kairi</p>
+            </div>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2026-12-02" data-actu-months="12" data-url="https://proquartet.fr/agenda/constellation-concert-de-decembre">
+          <div class="projet-img"><img src="assets/pq-viatores-v2.png" alt="Viatores Quartet — ProQuartet à La Scala Paris" style="object-position:50% 40%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Constellation — Viatores Quartet</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Série Constellation · La Piccola Scala, Paris</p>
+            <p class="projet-pastille">Mercredi 2 décembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2027-01-06" data-actu-months="1" data-url="https://proquartet.fr/agenda/constellation-concert-de-janvier">
+          <div class="projet-img"><img src="assets/pq-magenta.png" alt="Quatuor Magenta — ProQuartet à La Scala Paris" style="object-position:50% 30%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Constellation — Quatuor Magenta</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Série Constellation · La Piccola Scala, Paris</p>
+            <p class="projet-pastille">Mercredi 6 janvier 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2027-02-03" data-actu-months="2" data-url="https://proquartet.fr/agenda/constellation-concert-de-fevrier">
+          <div class="projet-img"><img src="assets/pq-trio-concept.png" alt="Trio Concept — ProQuartet à La Scala Paris" style="object-position:50% 30%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Constellation — Trio Concept</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Série Constellation · La Piccola Scala, Paris</p>
+            <p class="projet-pastille">Mercredi 3 février 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2027-03-03" data-actu-months="3" data-url="https://proquartet.fr/agenda/constellation-concert-de-mars">
+          <div class="projet-img"><img src="assets/pq-davidoff.png" alt="Davidoff Trio — ProQuartet à La Scala Paris" style="object-position:50% 40%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Constellation — Davidoff Trio</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Série Constellation · La Piccola Scala, Paris</p>
+            <p class="projet-pastille">Mercredi 3 mars 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2027-04-07" data-actu-months="4" data-url="https://proquartet.fr/agenda/constellation-concert-davril">
+          <div class="projet-img"><img src="assets/pq-varen.png" alt="Quatuor Våren — ProQuartet à La Scala Paris" style="object-position:50% 35%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Constellation — Quatuor Våren</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Série Constellation · La Piccola Scala, Paris</p>
+            <p class="projet-pastille">Mercredi 7 avril 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="proquartet" data-date="2027-06-02" data-actu-months="6" data-url="https://proquartet.fr/agenda/constellation-concert-de-cloture">
+          <div class="projet-img"><img src="assets/pq-arete.png" alt="Arete Quartet — ProQuartet à La Scala Paris" style="object-position:50% 50%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Constellation — Arete Quartet</p>
+            <p class="projet-cie">ProQuartet — Centre Européen de Musique de Chambre</p>
+            <p class="projet-detail">Série Constellation · La Piccola Scala, Paris</p>
+            <p class="projet-pastille">Mercredi 2 juin 2027 · Concert de clôture</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" data-no-actu class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-url="https://www.insulaorchestra.fr">
+          <div class="projet-img"><img src="assets/saison-insula.jpg" alt="Insula orchestra · La Seine Musicale — Saison 26/27"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Insula orchestra — Saison 26/27</p>
+            <p class="projet-cie">dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">Septembre 2026 – juin 2027</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2026-09-23" data-url="https://www.insulaorchestra.fr">
+          <div class="projet-img"><img src="assets/orchestre-beethoven-bourges-v2.jpg" alt="Beethoven Héroïque en tournée — Bourges, Maison de la Culture"><span class="img-credit" title="© Julien Benhamou"><span class="ic-txt">Julien Benhamou</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Beethoven Héroïque — Hors les murs</p>
+            <p class="projet-cie">Insula orchestra · Insula camerata · dir. Laurence Equilbey</p>
+            <p class="projet-detail">Bourges, Maison de la Culture</p>
+            <p class="projet-pastille">23 septembre 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2026-09-25" data-url="https://www.insulaorchestra.fr">
+          <div class="projet-img"><img src="assets/insula-david-fray.jpg" alt="Beethoven Héroïque — David Fray" style="object-position:35% 40%"><span class="img-credit" title="© Jean-Baptiste Mondino"><span class="ic-txt">Jean-Baptiste Mondino</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Beethoven Héroïque — David Fray</p>
+            <p class="projet-cie">Insula orchestra · Insula camerata · dir. Laurence Equilbey</p>
+            <p class="projet-detail">Ouverture de saison · La Seine Musicale, Auditorium Patrick-Devedjian</p>
+            <p class="projet-pastille">25 &amp; 26 septembre 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2026-10-14" data-url="https://www.insulaorchestra.fr/evenement/tchaikovski-2/">
+          <div class="projet-img"><img src="assets/insula-tchaikovski-accentus.jpg" alt="Tchaïkovski, Liturgie de Saint-Jean Chrysostome — accentus" style="object-position:50% 55%"><span class="img-credit" title="© Julien Benhamou"><span class="ic-txt">Julien Benhamou</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Tchaïkovski — Liturgie de Saint-Jean Chrysostome</p>
+            <p class="projet-cie">accentus · dir. Sigvards Kļava</p>
+            <p class="projet-detail">Bruckner, Motets · Tchaïkovski, Liturgie de Saint-Jean Chrysostome · a cappella · La Seine Musicale, Auditorium Patrick-Devedjian</p>
+            <p class="projet-pastille">Mercredi 14 octobre 2026 · 20h</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2026-11-12" data-url="https://www.insulaorchestra.fr/evenement/schumann-mendelssohn-2/">
+          <div class="projet-img"><img src="assets/insula-schumann-mendelssohn.jpg" alt="Schumann / Mendelssohn — Insula orchestra" style="object-position:50% 45%"><span class="img-credit" title="© Irmeli Jung"><span class="ic-txt">Irmeli Jung</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Schumann / Mendelssohn</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">12 – 14 novembre 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2026-12-08" data-url="https://www.insulaorchestra.fr/evenement/magnificat/">
+          <div class="projet-img"><img src="assets/insula-magnificat-accentus.jpg" alt="Magnificat — accentus" style="object-position:50% 40%"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Magnificat</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">8 – 16 décembre 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2027-01-23" data-url="https://www.insulaorchestra.fr/evenement/stabat-mater-2/">
+          <div class="projet-img"><img src="assets/insula-stabat-mater-accentus.jpg" alt="Stabat Mater — accentus &amp; Insula orchestra" style="object-position:50% 40%"><span class="img-credit" title="© Julien Benhamou"><span class="ic-txt">Julien Benhamou</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Stabat Mater</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">23 janvier 2027</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2027-02-24" data-url="https://www.insulaorchestra.fr/evenement/berlioz-schumann-2/">
+          <div class="projet-img"><img src="assets/insula-bouchard-lesieur.jpg" alt="Berlioz / Schumann — Marie-Andrée Bouchard-Lesieur" style="object-position:50% 30%"><span class="img-credit" title="© Romane Bégon"><span class="ic-txt">Romane Bégon</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Berlioz / Schumann</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">24 février – 5 mars 2027</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2027-03-23" data-url="https://www.insulaorchestra.fr/evenement/beethoven-la-pastorale/">
+          <div class="projet-img"><img src="assets/insula-pastorale-debargue.jpg" alt="Beethoven La Pastorale — Laurence Equilbey &amp; Lucas Debargue" style="object-position:50% 40%"><span class="img-credit" title="© Julien Benhamou"><span class="ic-txt">Julien Benhamou</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Beethoven La Pastorale</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">23 mars – 27 avril 2027</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-date="2027-04-21" data-url="https://www.insulaorchestra.fr/evenement/inferno-2/">
+          <div class="projet-img"><img src="assets/insula-inferno-visuel.png" alt="Inferno — Insula orchestra" style="object-position:50% 45%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Inferno</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">21 – 22 avril 2027</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" data-no-actu class="projet-card fade-up" data-cat="saison" data-sub="criee" data-url="https://www.theatre-lacriee.com">
+          <div class="projet-img"><img src="assets/saison-criee-renucci.jpg" alt="Théâtre de La Criée — Saison 26/27" style="object-position:60% 26%"><span class="img-credit" title="© Clément Vial"><span class="ic-txt">Clément Vial</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Théâtre de La Criée — Saison 26/27</p>
+            <p class="projet-detail">Dir. Robin Renucci · Centre Dramatique National · Marseille</p>
+            <p class="projet-pastille">Septembre 2026 – juin 2027</p>
+            <p class="projet-credit">Mission presse régionale · En collaboration pour la presse nationale avec Delphine Menjaud-Podrzycki [Overjoyed]</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="festival" data-url="https://festivalpaques.com">
+          <div class="projet-img"><img src="assets/festival-paques.jpg" alt="Festival de Pâques 2027"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de Pâques 2027</p>
+            <p class="projet-detail">Dir. Dominique Bluzet &amp; Renaud Capuçon · Aix-en-Provence</p>
+            <p class="projet-pastille">20 mars – 4 avril 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="concours" data-url="https://concoursgeneve.ch">
+          <div class="projet-img"><img src="assets/concours-geneve.jpg" alt="80e Concours de Genève — Direction d'orchestre &amp; Composition"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concours</p>
+            <p class="projet-name">80<sup>e</sup> Concours de Genève</p>
+            <p class="projet-cie">Direction d'orchestre &amp; Composition</p>
+            <p class="projet-detail">Victoria Hall · Orchestre de la Suisse Romande · Finales · 11 &amp; 13 novembre</p>
+            <p class="projet-pastille">6–13 novembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="scala" data-url="https://www.lascala-paris.com">
+          <div class="projet-img"><img src="assets/aux-armes-affiche-2026.png" alt="Festival Aux Armes, Contemporains ! 9e édition" style="object-position:50% 40%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Aux Armes, Contemporains ! — 9<sup>e</sup> édition</p>
+            <p class="projet-cie">La Scala Paris · Label Scala Music</p>
+            <p class="projet-detail">Festival dédié à la création musicale · 5 concerts, 3 soirées · Création mondiale d'Olivier Penard, Sonate à quatre · Soirée France Musique enregistrée en public · La Scala Paris</p>
+            <p class="projet-pastille">2 – 5 octobre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-actu-months="10" data-date="2026-09-30" data-url="https://theatre-lacriee.com/programmation/evenements/ma-pensee-creuse">
+          <div class="projet-img"><img src="assets/theatre-ma-pensee-creuse.jpg" alt="Ma pensée creuse" style="object-position:50% 40%"><span class="img-credit" title="© Camille Lemonnier"><span class="ic-txt">Camille Lemonnier</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Théâtre</p>
+            <p class="projet-name">Ma pensée creuse</p>
+            <p class="projet-cie">Mise en scène Kristina Chaumont</p>
+            <p class="projet-detail">La Criée lève l'ancre au Théâtre Joliette · Marseille</p>
+            <p class="projet-pastille">30 septembre – 3 octobre 2026 · Théâtre Joliette, Marseille</p>
+            <p class="projet-pastille">15 octobre 2026 · Théâtre des Halles, Avignon</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="theatre" data-date="2026-10-16" data-url="https://www.le-cpa.com/agenda/2026/manouchian-cet-apres-midi-15h">
+          <div class="projet-img"><img src="assets/theatre-manouchian.png" alt="Manouchian — Cet après-midi à 15h" style="object-position:70% 35%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Théâtre</p>
+            <p class="projet-name">Manouchian — Cet après-midi à 15h</p>
+            <p class="projet-cie">Compagnie Saté-Âtre</p>
+            <p class="projet-detail">Première en France · Théâtre de la Ville · Valence · Co-organisé par le Théâtre de la Ville de Valence et Le Cpa · 20h30</p>
+            <p class="projet-pastille">16 octobre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-actu-months="3" data-date="2027-03-10" data-url="https://theatre-lacriee.com/programmation/evenements/la-rive">
+          <div class="projet-img"><img src="assets/criee-la-rive.png" alt="La Rive — Louise Vignaud" style="object-position:50% 40%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Théâtre</p>
+            <p class="projet-name">La Rive</p>
+            <p class="projet-cie">Louise Vignaud · Cie La Résolue</p>
+            <p class="projet-detail">La Criée · Salle Déméter · Marseille · En coprogrammation avec Le Théâtre du Gymnase</p>
+            <p class="projet-pastille">10 – 19 mars 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-actu-months="1" data-date="2027-01-05" data-url="https://theatre-lacriee.com/programmation/evenements/lecole-des-femmes-2627">
+          <div class="projet-img"><img src="assets/theatre-ecole-des-femmes.jpg" alt="L'École des femmes" style="object-position:60% 55%"><span class="img-credit" title="© Geoffrey Posada Serguier"><span class="ic-txt">Geoffrey Posada Serguier</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Théâtre</p>
+            <p class="projet-name">L'École des femmes</p>
+            <p class="projet-cie">Molière · Mise en scène Robin Renucci</p>
+            <p class="projet-detail">La Criée · Salle Déméter · Marseille</p>
+            <p class="projet-pastille">Puis en tournée de septembre 2026 à janvier 2027 · 5 – 24 janvier 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="conference" data-url="https://festivalpaques.com">
+          <div class="projet-img"><img src="assets/conference-fdp-2027.jpg" alt="Lancement presse du Festival de Pâques 2027"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Conférence de presse</p>
+            <p class="projet-name">Festival de Pâques 2027 — Lancement</p>
+            <p class="projet-cie">Dominique Bluzet, Renaud Capuçon &amp; Daniel Baal [CIC]</p>
+            <p class="projet-detail">Hôtel national des Invalides, Grand Salon · Paris · Récital de Celia Oneto Bensaid</p>
+            <p class="projet-pastille">Mercredi 7 octobre 2026 · 19h</p>
+            <p class="projet-pastille">Présentation en avant-première de l'édition 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" data-no-actu class="projet-card fade-up" data-cat="saison" data-sub="croq">
+          <div class="projet-img"><img src="assets/croq-serie-illus.jpg" alt="Les Dimanches Croq'Musique — illustration"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Les Dimanches Croq'Musique — Saison 26/27</p>
+            <p class="projet-cie">Conception Solesne Loy · En rythme avec Croq'musique</p>
+            <p class="projet-detail">Salle Cortot · Paris · En partenariat avec l'École Normale de Musique de Paris Alfred Cortot · 6 dimanches musicaux</p>
+            <p class="projet-pastille">Septembre 2026 – juin 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="croq" data-url="https://www.sallecortot.com">
+          <div class="projet-img"><img src="assets/croq-sept.jpg" alt="Les Dimanches Croq'Musique — Mes premiers pas de musicien"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Jeune public</p>
+            <p class="projet-name">Croq'Musique — Mes premiers pas de musicien</p>
+            <p class="projet-cie">Conception Solesne Loy · École Normale de Musique de Paris</p>
+            <p class="projet-detail">Concert « Mon premier concert classique » à 17h · Ateliers 10h30–16h30 · Salle Cortot, Paris</p>
+            <p class="projet-pastille">Dimanche 20 septembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="croq" data-url="https://www.sallecortot.com">
+          <div class="projet-img"><img src="assets/croq-nov.jpg" alt="Les Dimanches Croq'Musique — Jouons avec les rythmes"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Jeune public</p>
+            <p class="projet-name">Croq'Musique — Jouons avec les rythmes</p>
+            <p class="projet-cie">Conception Solesne Loy · École Normale de Musique de Paris</p>
+            <p class="projet-detail">Concert « Mystère au concert » à 17h · Ateliers 10h30–16h30 · Salle Cortot, Paris</p>
+            <p class="projet-pastille">Dimanche 15 novembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="croq" data-url="https://www.sallecortot.com">
+          <div class="projet-img"><img src="presse/photos/croq-musique/croq-01.jpg" alt="Les Dimanches Croq'Musique — À la rencontre des instruments de musique"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Jeune public</p>
+            <p class="projet-name">Croq'Musique — À la rencontre des instruments de musique</p>
+            <p class="projet-cie">Conception Solesne Loy · École Normale de Musique de Paris</p>
+            <p class="projet-detail">Concert « Le Roi qui n'aimait pas la musique » à 17h · Ateliers 10h30–16h30 · Salle Cortot, Paris</p>
+            <p class="projet-pastille">Dimanche 17 janvier 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="croq" data-url="https://www.sallecortot.com">
+          <div class="projet-img"><img src="presse/photos/croq-musique/croq-02.jpg" alt="Les Dimanches Croq'Musique — La symphonie des notes"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Jeune public</p>
+            <p class="projet-name">Croq'Musique — La symphonie des notes</p>
+            <p class="projet-cie">Conception Solesne Loy · École Normale de Musique de Paris</p>
+            <p class="projet-detail">Concert « La Belle au bois dormant » à 17h · Ateliers 10h30–16h30 · Salle Cortot, Paris</p>
+            <p class="projet-pastille">Dimanche 14 mars 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="croq" data-url="https://www.sallecortot.com">
+          <div class="projet-img"><img src="presse/photos/croq-musique/croq-03.jpg" alt="Les Dimanches Croq'Musique — Promenade musicale"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Jeune public</p>
+            <p class="projet-name">Croq'Musique — Promenade musicale</p>
+            <p class="projet-cie">Conception Solesne Loy · École Normale de Musique de Paris</p>
+            <p class="projet-detail">Concert « Le Carnaval des animaux » à 17h · Ateliers 10h30–16h30 · Salle Cortot, Paris</p>
+            <p class="projet-pastille">Dimanche 25 avril 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="croq" data-url="https://www.sallecortot.com">
+          <div class="projet-img"><img src="presse/photos/croq-musique/croq-04.jpg" alt="Les Dimanches Croq'Musique — C'est toi l'artiste !"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Jeune public</p>
+            <p class="projet-name">Croq'Musique — C'est toi l'artiste !</p>
+            <p class="projet-cie">Conception Solesne Loy · École Normale de Musique de Paris</p>
+            <p class="projet-detail">Concert « La musique et les émotions » à 17h · Ateliers 10h30–16h30 · Salle Cortot, Paris</p>
+            <p class="projet-pastille">Dimanche 13 juin 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="festival">
+          <div class="projet-img"><img src="assets/festival-theatrons.jpg" alt="THÉÂTRONS 2026 — Erevan"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">THÉÂTRONS 2026</p>
+            <p class="projet-cie">Festival International Francophone du Spectacle Vivant</p>
+            <p class="projet-detail">Fondé &amp; dirigé par Saté Khachatryan · Erevan, Arménie</p>
+            <p class="projet-pastille">14–28 septembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-beethoven-extended.jpg" alt="Beethoven Extended, volume 1 — Insula orchestra / Laurence Equilbey"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Beethoven Extended, vol. 1 — Symphonies n° 5 &amp; 7</p>
+            <p class="projet-cie">Insula orchestra · Insula camerata · dir. Laurence Equilbey</p>
+            <p class="projet-detail">Harmonia Mundi</p>
+            <p class="projet-pastille">Sortie · 11 septembre 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="disque" data-sub="scala" data-also="saison:scala" data-also-strict>
+          <div class="projet-img"><img src="assets/disque-durliat-ravel.jpg" alt="Gabriel Durliat — Le Tombeau de Ravel"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Gabriel Durliat — Le Tombeau de Ravel</p>
+            <p class="projet-detail">Label Scala Music</p>
+            <p class="projet-pastille">Sortie · 2 octobre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="disque">
+          <div class="projet-img"><img src="assets/disque-emilie-mayer.png" alt="Emilie Mayer — Concerto pour piano & Symphonie n° 1"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Laurence Equilbey — Emilie Mayer</p>
+            <p class="projet-cie">David Fray · Insula orchestra</p>
+            <p class="projet-detail">Concerto pour piano en si bémol majeur · Symphonie n° 1 en ut mineur · Erato</p>
+            <p class="projet-pastille">Sortie · 15 janvier 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="disque" data-sub="scala" data-also="saison:scala" data-also-strict>
+          <div class="projet-img"><img src="assets/disque-secret-piano-gardens.jpg" alt="Secret Piano Gardens — Jodyline Gallavardin"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Jodyline Gallavardin — Secret Piano Gardens</p>
+            <p class="projet-detail">Label Scala Music</p>
+            <p class="projet-pastille">Sortie · février 2027</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="rocamadour">
+          <div class="projet-img"><img src="assets/actu-1.jpg" alt="Rêves — Alexis Grizard"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Alexis Grizard — Rêves · Orgue</p>
+            <p class="projet-detail">Label Rocamadour</p>
+            <p class="projet-pastille">Sortie · 19 juin 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="rocamadour">
+          <div class="projet-img"><img src="assets/disque-hymne-vierge.jpg" alt="Hymne à la Vierge — Ensemble la Sportelle"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Ensemble la Sportelle — Hymne à la Vierge</p>
+            <p class="projet-detail">Label Rocamadour</p>
+            <p class="projet-pastille">Sortie · 17 octobre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="rocamadour">
+          <div class="projet-img"><img src="assets/disque-ainsi-soit-il.jpg" alt="Ainsi soit-il — Enguerrand de Hys &amp; Paul Beynet"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Enguerand de Hys — Ainsi soit-il</p>
+            <p class="projet-detail">Label Rocamadour</p>
+            <p class="projet-pastille">Sortie · 27 mars 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up delay-1" data-cat="danse" data-url="https://www.emanuelgatdance.com/five-days-in-the-sun">
+          <div class="projet-img"><img src="assets/danse-5jours-martigues.jpg" alt="Cinq jours au soleil — Théâtre des Salins · Martigues"><span class="img-credit" title="© Julia Gat"><span class="ic-txt">Julia Gat</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Emanuel Gat — Cinq jours au soleil</p>
+            <p class="projet-cie">Emanuel Gat Dance</p>
+            <p class="projet-detail">Théâtre des Salins · Martigues</p>
+            <p class="projet-pastille">9 octobre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.emanuelgatdance.com/five-days-in-the-sun">
+          <div class="projet-img"><img src="assets/danse-5jours-cannes.jpg" alt="Cinq jours au soleil — Festival de Danse de Cannes"><span class="img-credit" title="© Julia Gat"><span class="ic-txt">Julia Gat</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Emanuel Gat — Cinq jours au soleil</p>
+            <p class="projet-cie">Emanuel Gat Dance</p>
+            <p class="projet-detail">Festival de Danse de Cannes</p>
+            <p class="projet-pastille">5 décembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.emanuelgatdance.com/five-days-in-the-sun">
+          <div class="projet-img"><img src="assets/danse-5jours-avignon.jpg" alt="Cinq jours au soleil — Festival Les Hivernales · Avignon"><span class="img-credit" title="© Julia Gat"><span class="ic-txt">Julia Gat</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Emanuel Gat — Cinq jours au soleil</p>
+            <p class="projet-cie">Emanuel Gat Dance</p>
+            <p class="projet-detail">Festival Les Hivernales · Avignon</p>
+            <p class="projet-pastille">20 février 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.emanuelgatdance.com/five-days-in-the-sun">
+          <div class="projet-img"><img src="assets/danse-5jours-lille.jpg" alt="Cinq jours au soleil — Opéra de Lille"><span class="img-credit" title="© Julia Gat"><span class="ic-txt">Julia Gat</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Emanuel Gat — Cinq jours au soleil</p>
+            <p class="projet-cie">Emanuel Gat Dance</p>
+            <p class="projet-detail">Opéra de Lille</p>
+            <p class="projet-pastille">10–12 juin 2027</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up delay-2" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-schubert.jpg" alt="Schubert D.960 — John Gade"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">John Gade — Schubert D.960</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 29 mai 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-arborescence.jpg" alt="Arborescence — Iris Scialom &amp; Antonin Bonnet"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Iris Scialom &amp; Antonin Bonnet — Arborescence</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 23 septembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-visions-amen.jpg" alt="Visions de l'Amen — Béroff &amp; Jude"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Michel Béroff &amp; Marie-Josèphe Jude — Visions de l'Amen</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 26 septembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-nuit-blanche.jpg" alt="Nuit Blanche — Jodyline Gallavardin"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Jodyline Gallavardin — Nuit Blanche</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 14 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-elmire.jpg" alt="Beyond the Limits — Quatuor Elmire"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Quatuor Elmire — Beyond the Limits</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 28 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-ombres-visions.jpg" alt="Ombres et Visions — Nour Ayadi"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Nour Ayadi — Ombres et Visions</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 6 mars 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="scala">
+          <div class="projet-img"><img src="assets/disque-keyboard-song.jpg" alt="A Keyboard Song — Yoann Moulin"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Yoann Moulin — A Keyboard Song</p>
+            <p class="projet-detail">Scala Music</p>
+            <p class="projet-pastille">Sortie · 10 avril 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-volver.jpg" alt="Volver — Vittorio Forte"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Vittorio Forte — Volver</p>
+            <p class="projet-detail">MIRARE</p>
+            <p class="projet-pastille">Sortie · 3 octobre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-comebach.jpg" alt="Come Bach — Vincent Beer-Demander"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Vincent Beer-Demander — Come Bach</p>
+            <p class="projet-detail">Maison Bleue</p>
+            <p class="projet-pastille">Sortie · 15 octobre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-bartal.jpg" alt="Grieg &amp; Saint-Saëns — Suzana Bartal"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Suzana Bartal — Grieg &amp; Saint-Saëns</p>
+            <p class="projet-detail">Channel Classics</p>
+            <p class="projet-pastille">Sortie · 17 octobre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-arod.jpg" alt="Haydn op. 76 — Quatuor Arod"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Quatuor Arod — Haydn · Quatuors op. 76</p>
+            <p class="projet-detail">Erato</p>
+            <p class="projet-pastille">Sortie · 14 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-fray.jpg" alt="Baroque Encores — David Fray"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">David Fray — Baroque Encores</p>
+            <p class="projet-detail">Erato</p>
+            <p class="projet-pastille">Sortie · 14 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-burgan.jpg" alt="La Voix — Patrick Burgan"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Patrick Burgan — La Voix</p>
+            <p class="projet-detail">Klarthe Records</p>
+            <p class="projet-pastille">Sortie · 20 février 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-mozart.jpg" alt="Mozart Vol. 2 — Nicolas Baldeyrou"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Nicolas Baldeyrou — Mozart · Vol. 2</p>
+            <p class="projet-detail">Alpha Classics</p>
+            <p class="projet-pastille">Sortie · 24 avril 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-gonzalez.jpg" alt="Genesis — Luis González Garrido"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Luis González Garrido — Genesis</p>
+            <p class="projet-detail">Klarthe Records</p>
+            <p class="projet-pastille">Sortie · 6 février 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-elise.jpg" alt="Élise, mon mirage — Samuel Strouk"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Samuel Strouk — Élise, mon mirage</p>
+            <p class="projet-detail">Well Done Simone ! Productions</p>
+            <p class="projet-pastille">Sortie · 24 avril 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="disque" data-sub="artistes">
+          <div class="projet-img"><img src="assets/disque-cinema.jpg" alt="Musiques de Cinéma — Insula orchestra / Laurence Equilbey"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Disque</p>
+            <p class="projet-name">Insula orchestra / Laurence Equilbey — Musiques de Cinéma</p>
+            <p class="projet-detail">Erato</p>
+            <p class="projet-pastille">Sortie · 24 avril 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="orchestre" data-sub="equilbey">
+          <div class="projet-img"><img src="assets/actu-4.jpg" alt="L'Enlèvement au sérail"><span class="img-credit" title="© Irmeli Jung"><span class="ic-txt">Irmeli Jung</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Opéra</p>
+            <p class="projet-name">L'Enlèvement au sérail</p>
+            <p class="projet-cie">Insula orchestra · dir. Laurence Equilbey</p>
+            <p class="projet-detail">Théâtre des Champs-Élysées</p>
+            <p class="projet-pastille">3–12 juin 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="orchestre" data-sub="equilbey" data-url="https://www.insulaorchestra.fr/evenement/messe-du-couronnement-mozart/">
+          <div class="projet-img"><img src="assets/orchestre-messe-couronnement.jpg" alt="Messe du Couronnement, Mozart — Insula orchestra &amp; accentus / Laurence Equilbey"><span class="img-credit" title="© Julien Benhamou"><span class="ic-txt">Julien Benhamou</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Mozart — Messe du Couronnement</p>
+            <p class="projet-cie">Insula orchestra &amp; accentus · dir. Laurence Equilbey</p>
+            <p class="projet-detail">en tournée</p>
+            <p class="projet-pastille">15–17 juillet 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="orchestre" data-sub="rhorer" data-url="https://cercledelharmonie.com/concerts/mozart-grande-messe/">
+          <div class="projet-img"><img src="assets/orchestre-cercle-harmonie.jpg" alt="Mozart, Grande Messe — Le Cercle de l'Harmonie"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Mozart — Grande Messe</p>
+            <p class="projet-cie">Le Cercle de l'Harmonie · dir. Jérémie Rhorer</p>
+            <p class="projet-detail">Festival de Saint-Denis</p>
+            <p class="projet-pastille">16 juin 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="orchestre" data-sub="delaforge" data-url="https://www.atelierlyriquedetourcoing.fr/bach-passion-selon-saint-jean-29-mars-2026/">
+          <div class="projet-img"><img src="assets/orchestre-delaforge.jpg" alt="Bach, Passion selon Saint-Jean — Camille Delaforge"><span class="img-credit" title="© Emilie Brouchon"><span class="ic-txt">Emilie Brouchon</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Bach — Passion selon Saint-Jean</p>
+            <p class="projet-cie">Ensemble Il Caravaggio · dir. Camille Delaforge</p>
+            <p class="projet-pastille">Tournée · 29 mars au 2 avril 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="orchestre" data-sub="ziouani" data-url="https://www.orchestre-divertimento.com/concerts/cosmopoles-de-laurore-au-zenith">
+          <div class="projet-img"><img src="assets/orchestre-ziouani.jpg" alt="Cosmopoles, de l'aurore au zénith — Zahia Ziouani / Divertimento"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Concert</p>
+            <p class="projet-name">Cosmopoles — de l'aurore au zénith</p>
+            <p class="projet-cie">Divertimento · dir. Zahia Ziouani</p>
+            <p class="projet-pastille">Samedi 26 septembre 2026 · 18h · MC93 Bobigny</p>
+            <p class="projet-credit">En collaboration avec l'Agence Sébastien d'Assigny</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="festival" data-url="https://festivalpaques.com">
+          <div class="projet-img"><img src="assets/festival-paques.jpg" alt="Festival de Pâques 2026"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de Pâques 2026</p>
+            <p class="projet-detail">Dir. Dominique Bluzet &amp; Renaud Capuçon · Aix-en-Provence</p>
+            <p class="projet-pastille">28 mars – 12 avril 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://www.chatelet.com/programmation/26-27/les-folies-musicales-26-27/">
+          <div class="projet-img"><img src="assets/festival-folies-2027.png" alt="Les Folies musicales 26-27 — Théâtre du Châtelet" style="object-position:0% 50%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Les Folies musicales — 3ᵉ édition</p>
+            <p class="projet-detail">Théâtre du Châtelet · Orchestre de chambre de Paris, Les Talens Lyriques, Quatuor Beat, Geneva Camerata · Xᵉ Symphonie (Remix)²</p>
+            <p class="projet-pastille">26 février – 2 mars 2027</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://www.chatelet.com">
+          <div class="projet-img"><img src="assets/festival-folies.jpg" alt="Les Folies musicales — Théâtre du Châtelet"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Les Folies musicales — 2ᵉ édition</p>
+            <p class="projet-detail">Théâtre du Châtelet</p>
+            <p class="projet-pastille">6–11 mai 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://festivaldevauvenargues.fr">
+          <div class="projet-img"><img src="assets/festival-vauvenargues-2027.jpg" alt="Festival de Vauvenargues — concert en plein air"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de Vauvenargues</p>
+            <p class="projet-detail">Dir. Bilal Alnemr · dates à préciser</p>
+            <p class="projet-pastille">Juillet 2027</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://www.unviolonsurlesable.com">
+          <div class="projet-img"><img src="assets/festival-violon-sable-2027.jpg" alt="Un violon sur le sable — concert sur la plage de Royan" style="object-position:50% 60%"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Un violon sur le sable</p>
+            <p class="projet-detail">Dir. Philippe Tranchet</p>
+            <p class="projet-pastille">23 – 31 juillet 2027</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://festivaldevauvenargues.fr">
+          <div class="projet-img"><img src="assets/festival-vauvenargues.jpg" alt="Festival de Vauvenargues — Bilal Alnemr"><span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de Vauvenargues</p>
+            <p class="projet-detail">Dir. Bilal Alnemr</p>
+            <p class="projet-pastille">17–22 juillet 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up delay-2" data-cat="festival" data-url="https://www.itinerairebaroque.com">
+          <div class="projet-img"><img src="https://www.itinerairebaroque.com/wp-content/uploads/2019/05/banner-concert-ton.jpg" alt="Itinéraire Baroque en Périgord — Ton Koopman" referrerpolicy="no-referrer"><span class="img-credit" title="© DR"><span class="ic-txt">DR</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Itinéraire Baroque en Périgord</p>
+            <p class="projet-detail">Dir. Ton Koopman</p>
+            <p class="projet-pastille">25 juillet–2 août 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="festival" data-url="https://www.rocamadourfestival.com">
+          <div class="projet-img"><img src="assets/festival-rocamadour.jpg" alt="Festival de Rocamadour — concert en plein air"><span class="img-credit" title="© François Leguen"><span class="ic-txt">François Leguen</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de Rocamadour — 21ᵉ édition</p>
+            <p class="projet-detail">Dir. Emmeran Rollin</p>
+            <p class="projet-pastille">15–26 août 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://www.chaise-dieu.com">
+          <div class="projet-img"><img src="assets/festival-chaisedieu-2027.png" alt="Festival de La Chaise-Dieu — 61ᵉ édition"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de La Chaise-Dieu — 61ᵉ édition</p>
+            <p class="projet-detail">Dir. Boris Blanco</p>
+            <p class="projet-pastille">17–29 août 2027</p>
+            <p class="projet-credit">En collaboration avec Valérie Weill · Image musique</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up delay-1" data-cat="festival" data-url="https://www.chaise-dieu.com">
+          <div class="projet-img"><img src="assets/festival-chaisedieu.jpg" alt="Festival de La Chaise-Dieu — 60ᵉ édition"><span class="img-credit" title="© V. Jolfre"><span class="ic-txt">V. Jolfre</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Festival de La Chaise-Dieu — 60ᵉ édition</p>
+            <p class="projet-detail">Dir. Boris Blanco</p>
+            <p class="projet-pastille">18–30 août 2026</p>
+            <p class="projet-credit">En collaboration avec Valérie Weill · Image musique</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up delay-2" data-cat="festival" data-url="https://festivalnosjoursheureux.fr">
+          <div class="projet-img"><img src="assets/festival-njh-2027.png" alt="Nos jours heureux — Saint-Bonnet-du-Gard"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Nos jours heureux — 3ᵉ édition</p>
+            <p class="projet-detail">Dir. Julie Fuchs · Saint-Bonnet-du-Gard</p>
+            <p class="projet-pastille">25–29 août 2027</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up delay-2" data-cat="festival" data-url="https://festivalnosjoursheureux.fr">
+          <div class="projet-img"><img src="assets/festival-njh.jpg" alt="Nos jours heureux — Saint-Bonnet-du-Gard"><span class="img-credit" title="© Florent Baffi"><span class="ic-txt">Florent Baffi</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Festival</p>
+            <p class="projet-name">Nos jours heureux — 2ᵉ édition</p>
+            <p class="projet-detail">Dir. Julie Fuchs · Saint-Bonnet-du-Gard</p>
+            <p class="projet-pastille">19–23 août 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" data-no-actu class="projet-card fade-up delay-2" data-cat="saison" data-sub="scala" data-url="https://www.lascala-paris.com">
+          <div class="projet-img"><img src="assets/saison-scala.jpg" alt="La Scala Paris — Saison 25/26"><span class="img-credit" title="© Bernard Martinez"><span class="ic-txt">Bernard Martinez</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">La Scala Paris — Saison 25/26</p>
+            <p class="projet-cie">dir. Frédéric Biessy</p>
+            <p class="projet-detail">Dir. de la musique : Rodolphe Bruneau-Boulmier · Paris</p>
+            <p class="projet-pastille">Septembre 2025 – juin 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" data-no-actu class="projet-card fade-up delay-2" data-cat="saison" data-sub="insula" data-also="orchestre:equilbey" data-url="https://www.insulaorchestra.fr">
+          <div class="projet-img"><img src="assets/saison-insula.jpg" alt="Insula orchestra · La Seine Musicale — Saison 25/26"></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Insula orchestra — Saison 25/26</p>
+            <p class="projet-cie">dir. Laurence Equilbey</p>
+            <p class="projet-detail">La Seine Musicale · Boulogne-Billancourt</p>
+            <p class="projet-pastille">Septembre 2025 – juin 2026</p>
+            <p class="projet-credit">En collaboration avec Marie Audigier · agence maa</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" data-no-actu class="projet-card fade-up delay-1" data-cat="saison" data-sub="criee" data-url="https://www.theatre-lacriee.com">
+          <div class="projet-img"><img src="assets/saison-criee-renucci.jpg" alt="Robin Renucci — Théâtre de La Criée" style="object-position:60% 26%"><span class="img-credit" title="© Clément Vial"><span class="ic-txt">Clément Vial</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Saison</p>
+            <p class="projet-name">Théâtre de La Criée — Saison 25/26</p>
+            <p class="projet-detail">Dir. Robin Renucci · Centre Dramatique National · Marseille</p>
+            <p class="projet-pastille">Septembre 2025 – juin 2026</p>
+            <p class="projet-credit">Mission presse régionale · En collaboration pour la presse nationale avec Delphine Menjaud-Podrzycki [Overjoyed]</p>
+          </div>
+        </div>
+        <div class="projet-card fade-up delay-2" data-season="2026-2027" data-cat="danse" data-url="https://www.emanuelgatdance.com/sacre">
+          <div class="projet-img"><img src="assets/danse-bach-sacre.jpg" alt="Emanuel Gat Dance — BACH to SACRE"><span class="img-credit" title="© EG"><span class="ic-txt">EG</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Emanuel Gat — BACH to SACRE</p>
+            <p class="projet-cie">Emanuel Gat Dance</p>
+            <p class="projet-detail">Oriente Occidente, Rovereto · puis en tournée</p>
+            <p class="projet-pastille">Création · 12 septembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/danse-roi-oiseau.jpg" alt="Le Roi et l'Oiseau — Cie (1)Promptu"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">L'Envolée, Seine-Saint-Denis · puis en tournée</p>
+            <p class="projet-pastille">Création · 4–8 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-massy.jpg" alt="Le Roi et l'Oiseau — Opéra de Massy"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Opéra de Massy</p>
+            <p class="projet-pastille">21 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-cannes.jpg" alt="Le Roi et l'Oiseau — Festival International de Danse de Cannes" style="object-position:50% 22%"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Festival International de Danse de Cannes</p>
+            <p class="projet-pastille">28 novembre 2025</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-mougins.jpg" alt="Le Roi et l'Oiseau — Scène 55 · Mougins"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Scène 55 · Mougins</p>
+            <p class="projet-pastille">5–6 février 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-arles.jpg" alt="Le Roi et l'Oiseau — Théâtre d'Arles"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Théâtre d'Arles</p>
+            <p class="projet-pastille">10 mars 2026</p>
+          </div>
+        </div>
+        <div data-season="2025-2026" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-aix.jpg" alt="Le Roi et l'Oiseau — Grand Théâtre de Provence · Aix-en-Provence"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Grand Théâtre de Provence · Aix-en-Provence</p>
+            <p class="projet-pastille">13–14 mars 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-toulon.jpg" alt="Le Roi et l'Oiseau — Châteauvallon-Liberté · Toulon"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Châteauvallon-Liberté · Toulon</p>
+            <p class="projet-pastille">5 novembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-martigues.jpg" alt="Le Roi et l'Oiseau — Théâtre des Salins · Martigues"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Théâtre des Salins · Martigues</p>
+            <p class="projet-pastille">20 novembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/roi-oiseau-suresnes.jpg" alt="Le Roi et l'Oiseau — Théâtre de Suresnes Jean Vilar"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Théâtre de Suresnes Jean Vilar</p>
+            <p class="projet-pastille">6 décembre 2026</p>
+          </div>
+        </div>
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="danse" data-url="https://www.1promptu.fr/le-roi-et-loiseau/">
+          <div class="projet-img"><img src="assets/danse-roi-oiseau.jpg" alt="Le Roi et l'Oiseau — Théâtre Zinga Zanga · Béziers"><span class="img-credit" title="© Anaïs Baseilhac"><span class="ic-txt">Anaïs Baseilhac</span></span></div>
+          <div class="projet-info">
+            <p class="projet-tag">Danse</p>
+            <p class="projet-name">Émilie Lalande — Le Roi et l'Oiseau</p>
+            <p class="projet-cie">Cie (1)Promptu</p>
+            <p class="projet-detail">Théâtre Zinga Zanga · Béziers</p>
+            <p class="projet-pastille">21 mai 2027</p>
+          </div>
+        </div>
+      </div>
+      <div id="grid-months"></div>
+      <p class="cat-note" id="orchestre-note"></p>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════ L'AGENCE ═══════════════════ -->
+<div id="page-agence" class="page" data-screen-label="L'agence">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" class="active" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="page-eyebrow">02 — À propos</p>
+        <h1 class="page-title">L'<em>agence</em></h1>
+      </div>
+      <div class="page-header-right">Aix-en-Provence</div>
+    </div>
+
+    <div class="agence-layout fade-up">
+      <aside class="agence-side">
+        <span class="agence-side-rule"></span>
+        <p class="agence-col-meta">Attachée de presse · Fondatrice</p>
+        <p class="agence-col-name">Marie Lanzafame</p>
+        <div class="agence-photo-wrap">
+          <img class="agence-photo" src="assets/marie-lanzafame.jpg" alt="Marie Lanzafame">
+          <span class="img-credit" title="© Caroline Doutre"><span class="ic-txt">Caroline Doutre</span></span>
+        </div>
+        <div class="facts">
+          <div class="fact-row"><span class="fact-label">Spécialités</span><span class="fact-val">Musique classique · Danse · Cirque · Spectacle vivant</span></div>
+          <div class="fact-row"><span class="fact-label">Couverture</span><span class="fact-val">Région Sud · National · International</span></div>
+        </div>
+      </aside>
+      <div class="agence-bio">
+        <p class="bio bio-lead">J'ai fondé l'agence <em>Lanzafame Presse</em> pour accompagner les institutions, les ensembles, les artistes et les labels dans leur dialogue avec la presse spécialisée et généraliste. Depuis plus de quinze ans, j'interviens sur l'ensemble du territoire national au cœur d'un secteur qui m'est profondément cher : la <strong>musique classique, l'opéra, la danse et le spectacle vivant</strong>.</p>
+        <p class="bio">Mon travail repose sur une relation de confiance durable avec les rédactions et une lecture attentive des lignes éditoriales. J'accompagne chaque projet dans la construction de son récit médiatique — qu'il s'agisse de la sortie d'un disque, du lancement d'une saison, de la promotion d'un festival ou de la mise en lumière d'un artiste. De la conception du dossier de presse à l'organisation de voyages presse, en passant par le suivi des parutions et la coordination avec les équipes de communication, je prends en charge l'ensemble du spectre des relations presse, avec l'exigence et la disponibilité que ce métier requiert.</p>
+        <blockquote class="agence-quote agence-quote-end">Mettre en lumière les <em>artistes, les projets et les œuvres</em> que j'aime, auprès des journalistes qui savent en parler — c'est le cœur de mon métier.</blockquote>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<div id="page-contact" class="page" data-screen-label="Contact">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" class="active" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="page-eyebrow">03 — Contact</p>
+        <h1 class="page-title">Parlons de<br><em>votre projet</em></h1>
+      </div>
+      <div class="page-header-right">Réponse sous<br>48 heures</div>
+    </div>
+
+    <div class="contact-layout fade-up">
+      <div class="contact-left">
+        <div class="contact-left-z">Z</div>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="c-label">Nom</span>
+            <span class="c-val">Marie Lanzafame</span>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Email</span>
+            <a href="mailto:marielanzafamepresse@gmail.com" class="c-val">marielanzafamepresse@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Téléphone</span>
+            <a href="tel:+33664769108" class="c-val">06 64 76 91 08</a>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Localisation</span>
+            <span class="c-val">Aix-en-Provence</span>
+          </div>
+          <div class="contact-detail">
+            <span class="c-label">Instagram</span>
+            <a href="https://instagram.com/lanzafame_presse" target="_blank" class="c-val">@lanzafame_presse</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <p class="form-title">Envoyer un <em>message</em></p>
+        <div class="form-success" id="form-success">Message envoyé — réponse sous 48 heures.</div>
+        <form id="contact-form" onsubmit="submitForm(event)">
+          <div class="form-group">
+            <label class="form-label">Nom &amp; prénom</label>
+            <input type="text" class="form-input" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="votre@email.fr" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Organisation</label>
+            <input type="text" class="form-input" placeholder="Structure, institution, label…">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Décrivez votre projet en quelques lignes…" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════ ESPACE PRESSE ═══════════════════ -->
+<div id="page-presse" class="page" data-screen-label="Espace presse">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro active" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+
+  <div class="page-content">
+    <!-- LOGIN -->
+    <div id="press-login" class="press-login">
+      <div class="login-box">
+        <p class="login-eyebrow">Accès réservé</p>
+        <h1 class="login-title">Espace <em>presse</em></h1>
+        <input type="password" id="pwd" class="login-input" placeholder="Code d'accès" onkeydown="if(event.key==='Enter')checkPwd()">
+        <p class="login-error" id="pwd-err">Code incorrect — réessayez.</p>
+        <button class="login-submit" onclick="checkPwd()">Entrer →</button>
+        <span class="login-hint">Démo · code : presse2026</span>
+      </div>
+    </div>
+
+    <!-- CONTENU -->
+    <div id="press-content" style="display:none;">
+      <div class="page-header">
+        <div>
+          <p class="page-eyebrow">Accès privé · Saison 2026–2027</p>
+          <h1 class="page-title">Espace <em>presse</em></h1>
+        </div>
+        <div class="ep-header-actions">
+          <button class="ep-logout" onclick="logout()">Se déconnecter →</button>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="ep-subscribe">
+          <div class="ep-sub-text">
+            <p class="ep-sub-eyebrow">Liste de diffusion presse</p>
+            <p class="ep-sub-title">Recevez en avant-première les prochains dossiers &amp; communiqués</p>
+          </div>
+          <form class="ep-sub-form" onsubmit="subscribePresse(event)">
+            <input type="email" class="ep-sub-input" placeholder="votre@email.fr" required>
+            <button type="submit" class="ep-sub-btn">Recevoir les informations →</button>
+            <p class="ep-sub-success" id="ep-sub-success">Merci — vous êtes bien inscrit·e à la liste presse.</p>
+          </form>
+        </div>
+        <div class="ep-grid">
+          <div class="ep-client">
+            <p class="ep-client-tag">Septembre 2026 · Danse</p>
+            <p class="ep-client-name">Emanuel Gat Dance</p>
+            <p class="ep-client-date">BACH to SACRE · création 12 septembre 2026 · Oriente Occidente, Rovereto · puis en tournée<br>Five days in the sun · en tournée</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="https://www.emanuelgatdance.com/pro-page/" target="_blank" rel="noopener">Espace presse →</a></div>
+            <p class="ep-access">Mot de passe : <strong>edg</strong></p>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Septembre 2026 · Festival</p>
+            <p class="ep-client-name">THÉÂTRONS 2026</p>
+            <p class="ep-client-date">Festival International Francophone du Spectacle Vivant · Saté Khachatryan · Erevan · 14–28 septembre</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="#" onclick="openDocs('theatrons');return false;">Dossiers presse (1)</a><a class="ep-btn" href="#" onclick="openGal('theatrons');return false;">Kit photos (1)</a></div>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Septembre 2026 · Concert</p>
+            <p class="ep-client-name">Zahia Ziouani · Divertimento</p>
+            <p class="ep-client-date">Cosmopoles, de l'aurore au zénith · MC93 Bobigny · 26 septembre</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="https://drive.google.com/drive/folders/14czz9Or87JV6MyPRDM77_ZjTLu1fNLNm" target="_blank" rel="noopener">Espace presse →</a><a class="ep-btn" href="https://drive.google.com/drive/folders/1W0mEzV22tpRMjwSQ_Pe40EyKXZVujGdH" target="_blank" rel="noopener">Cosmopoles →</a></div>
+            <p class="ep-access">Dossier &amp; kit photos · Google Drive</p>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Saison 26/27 · Musique</p>
+            <p class="ep-client-name">La Scala Paris</p>
+            <p class="ep-client-date">Aux Armes, Contemporains ! 9ᵉ édition · ProQuartet à La Piccola Scala · octobre 2026 – juin 2027</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="#">Espace presse →</a></div>
+            <p class="ep-access">Accès à venir</p>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Saison 26/27 · Orchestre</p>
+            <p class="ep-client-name">Insula orchestra &amp; accentus</p>
+            <p class="ep-client-date">dir. Laurence Equilbey · La Seine Musicale · septembre 2026 – juin 2027</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="#" onclick="openDocs('insula');return false;">Dossiers presse (3)</a><a class="ep-btn" href="#" onclick="openGal('insula');return false;">Kit photos (8)</a></div>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Saison 26/27 · Théâtre</p>
+            <p class="ep-client-name">Théâtre de La Criée</p>
+            <p class="ep-client-date">dir. Robin Renucci · Centre Dramatique National · Marseille · septembre 2026 – juin 2027</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="https://theatre-lacriee.com/presse" target="_blank" rel="noopener">Espace presse →</a></div>
+            <p class="ep-access">Identifiant : <strong>presse</strong> · Mot de passe : <strong>saisonlacriee</strong></p>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Novembre 2026 · Concours</p>
+            <p class="ep-client-name">80ᵉ Concours de Genève</p>
+            <p class="ep-client-date">Direction d'orchestre &amp; Composition · Victoria Hall · finales 11 &amp; 13 novembre</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="presse/Dossier-presse-Concours-de-Geneve-2026.pdf" target="_blank" rel="noopener">↓ Dossier de presse</a></div>
+            <p class="ep-access">Kit photos sur demande</p>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Mars – Avril 2027 · Festival</p>
+            <p class="ep-client-name">Festival de Pâques</p>
+            <p class="ep-client-date">dir. Dominique Bluzet &amp; Renaud Capuçon · Aix-en-Provence · 20 mars – 4 avril 2027</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="https://festivalpaques.com/presse" target="_blank" rel="noopener">Espace presse →</a></div>
+            <p class="ep-access">Mot de passe : <strong>FestivalP@ques2021</strong></p>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Saison 26/27 · Jeune public</p>
+            <p class="ep-client-name">Les Dimanches Croq'Musique</p>
+            <p class="ep-client-date">Conception Solesne Loy · Salle Cortot, Paris · 6 dimanches musicaux · septembre 2026 – juin 2027</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="presse/Dossier-presse-Les-Dimanches-Croq-Musique.pdf" target="_blank" rel="noopener">↓ Dossier de presse</a><a class="ep-btn" href="#" onclick="openGal('croq-musique');return false;">Kit photos (4)</a></div>
+          </div>
+          <div class="ep-client">
+            <p class="ep-client-tag">Octobre 2026 · Disque</p>
+            <p class="ep-client-name">Gabriel Durliat</p>
+            <p class="ep-client-date">Le Tombeau de Ravel · Label Scala Music · sortie 2 octobre 2026</p>
+            <div class="ep-actions"><a class="ep-btn primary" href="presse/CP-Gabriel-Durliat-Le-Tombeau-de-Ravel.pdf" target="_blank" rel="noopener">↓ Communiqué</a><a class="ep-btn" href="presse/Livret-Gabriel-Durliat-Le-Tombeau-de-Ravel.pdf" target="_blank" rel="noopener">↓ Livret</a><a class="ep-btn" href="#" onclick="openGal('durliat');return false;">Kit photos (4)</a></div>
+          </div>
+        </div>
+        <div class="ep-gal" id="ep-gal" onclick="if(event.target===this)closeGal()">
+          <div class="ep-gal-head"><p class="ep-gal-title" id="ep-gal-title"></p><button class="ep-gal-close" onclick="closeGal()">Fermer ✕</button></div>
+          <div class="ep-gal-grid" id="ep-gal-grid"></div>
+        </div>
+        <div class="ep-grid">
+          <div class="ep-contact-bar">
+            <div><p class="ep-clabel">Contact</p><p class="ep-cval">Marie Lanzafame</p></div>
+            <div><p class="ep-clabel">Email</p><a href="mailto:marielanzafamepresse@gmail.com" class="ep-cval">marielanzafamepresse@gmail.com</a></div>
+            <div><p class="ep-clabel">Téléphone</p><a href="tel:+33664769108" class="ep-cval">06 64 76 91 08</a></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════ MENTIONS LÉGALES ═══════════════════ -->
+<div id="page-mentions" class="page" data-screen-label="Mentions légales">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+  <div class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="page-eyebrow">Informations légales</p>
+        <h1 class="page-title">Mentions <em>légales</em></h1>
+      </div>
+      <div class="page-header-right">lanzafame-presse.com</div>
+    </div>
+    <div class="legal-wrap">
+      <div class="legal-block">
+        <p class="legal-h">Éditeur du site</p>
+        <p class="legal-meta">
+          <strong>Lanzafame Presse</strong><br>
+          Marie Lanzafame — entrepreneuse individuelle<br>
+          9 rue du Maréchal Joffre, 13100 Aix-en-Provence<br>
+          SIRET : 933 173 411 00036<br>
+          E-mail : <a href="mailto:marielanzafamepresse@gmail.com">marielanzafamepresse@gmail.com</a>
+        </p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Directrice de la publication</p>
+        <p>Marie Lanzafame.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Hébergement</p>
+        <p class="legal-meta">
+          <strong>Netlify, Inc.</strong><br>
+          512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis<br>
+          <a href="https://www.netlify.com" target="_blank" rel="noopener">www.netlify.com</a>
+        </p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Propriété intellectuelle</p>
+        <p>L'ensemble des contenus présents sur ce site (textes, mise en page, identité graphique) est la propriété de Lanzafame Presse, sauf mention contraire. Toute reproduction ou représentation, totale ou partielle, sans autorisation préalable est interdite.</p>
+        <p>Les photographies publiées sur le site demeurent la propriété de leurs auteurs respectifs, mentionnés en crédit sur chaque visuel. Elles sont diffusées dans le cadre de la promotion des artistes et projets accompagnés par l'agence.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Liens externes</p>
+        <p>Ce site comporte des liens vers des sites tiers (institutions, festivals, artistes, labels). Lanzafame Presse n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Données personnelles</p>
+        <p>Le traitement des données collectées via ce site est détaillé dans notre <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>.</p>
+      </div>
+      <p class="legal-updated">Dernière mise à jour : juin 2026</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══════════════════ POLITIQUE DE CONFIDENTIALITÉ ═══════════════════ -->
+<div id="page-rgpd" class="page" data-screen-label="Politique de confidentialité">
+  <nav>
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;"><span class="nav-mark">Z</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="showPage('projets');return false;">Projets</a></li>
+      <li><a href="#" onclick="showPage('agence');return false;">L'agence</a></li>
+      <li><a href="#" onclick="showPage('contact');return false;">Contact</a></li>
+      <li><a href="#" class="nav-pro" onclick="showPage('presse');return false;">
+        <svg width="10" height="12" viewBox="0 0 12 14" fill="none"><rect x="1.5" y="5.5" width="9" height="7" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M4 5.5V4a2 2 0 1 1 4 0v1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+        Espace presse
+      </a></li>
+    </ul>
+  </nav>
+  <div class="page-content">
+    <div class="page-header">
+      <div>
+        <p class="page-eyebrow">Protection des données</p>
+        <h1 class="page-title">Politique de <em>confidentialité</em></h1>
+      </div>
+      <div class="page-header-right">RGPD</div>
+    </div>
+    <div class="legal-wrap">
+      <div class="legal-block">
+        <p class="legal-h">Responsable du traitement</p>
+        <p class="legal-meta">
+          <strong>Lanzafame Presse</strong> — Marie Lanzafame<br>
+          9 rue du Maréchal Joffre, 13100 Aix-en-Provence<br>
+          <a href="mailto:marielanzafamepresse@gmail.com">marielanzafamepresse@gmail.com</a>
+        </p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Données collectées</p>
+        <p>Ce site ne collecte des données personnelles que lorsque vous remplissez volontairement le formulaire de contact ou le formulaire d'inscription aux actualités : nom, adresse e-mail et message. Aucune création de compte n'est requise pour consulter le site.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Finalité &amp; base légale</p>
+        <p>Ces informations sont utilisées uniquement pour répondre à vos demandes et, le cas échéant, vous transmettre les actualités de l'agence. Elles reposent sur votre consentement et ne sont jamais cédées ni vendues à des tiers.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Durée de conservation</p>
+        <p>Vos données sont conservées le temps nécessaire au traitement de votre demande, puis archivées ou supprimées dans un délai raisonnable. Vous pouvez demander leur suppression à tout moment.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Cookies</p>
+        <p>Ce site n'utilise pas de cookies publicitaires ni de traceurs à des fins de suivi. Seules les données techniques strictement nécessaires à l'affichage des pages peuvent être traitées par l'hébergeur.</p>
+      </div>
+      <div class="legal-block">
+        <p class="legal-h">Vos droits</p>
+        <p>Conformément au Règlement général sur la protection des données (RGPD) et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression de vos données. Pour l'exercer, écrivez à <a href="mailto:marielanzafamepresse@gmail.com">marielanzafamepresse@gmail.com</a>.</p>
+        <p>Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>).</p>
+      </div>
+      <p class="legal-updated">Dernière mise à jour : juin 2026</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-left">© 2026 Lanzafame — Relations presse</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="showPage('rgpd');return false;">Politique de confidentialité</a>
+      <a href="https://instagram.com/lanzafame_presse" target="_blank">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+</div><!-- /site-wrapper -->
+
+<script>
+// ─── ROUTAGE ───
+const PAGES = ['home','projets','agence','contact','presse','mentions','rgpd'];
+function showPage(id){
+  PAGES.forEach(p=>{const el=document.getElementById('page-'+p);if(el)el.classList.remove('active');});
+  const target=document.getElementById('page-'+id);
+  if(target)target.classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+  if(id==='presse'){
+    const pl=document.getElementById('press-login');
+    const pc=document.getElementById('press-content');
+    if(pl)pl.style.display='flex';
+    if(pc)pc.style.display='none';
+  }
+  setTimeout(observeFadeUps,30);
+}
+
+// ─── CARROUSEL "ACTU DU MOIS" (dynamique : projets du mois en cours) ───
+const MONTHS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+let currentSlide=0, totalSlides=0, autoTimer=null, lastActuMonth=-1;
+function cardDateText(card){return [...card.querySelectorAll('.projet-detail,.projet-pastille')].map(e=>e.textContent).join(' · ').toLowerCase();}
+function dateTokens(t){return t.match(/[0-9]+|[a-zàâäéèêëîïôöûüç]+/g)||[];}
+function dateParts(t){
+  const tok=dateTokens(t);
+  let mi=-1,month=0;
+  for(let i=0;i<tok.length;i++){const j=MONTHS.indexOf(tok[i]);if(j>=0){mi=i;month=j+1;break;}}
+  let year=0;
+  for(let i=(mi<0?0:mi);i<tok.length;i++){if(/^20\d\d$/.test(tok[i])){year=+tok[i];break;}}
+  if(!year){for(const w of tok){if(/^20\d\d$/.test(w)){year=+w;break;}}}
+  let day=0;
+  if(mi>0&&/^\d{1,2}$/.test(tok[mi-1])){let k=mi-1;while(k>0&&/^\d{1,2}$/.test(tok[k-1]))k--;day=+tok[k];}
+  return {year,month,day};
+}
+function projectMonths(card){
+  if(card.dataset.actuMonths)return new Set(card.dataset.actuMonths.split(',').map(Number));
+  const tok=dateTokens(cardDateText(card));
+  const s=new Set();
+  tok.forEach(w=>{const i=MONTHS.indexOf(w);if(i>=0)s.add(i+1);});
+  return s;
+}
+function goToSlide(n){
+  if(!totalSlides)return;
+  currentSlide=(n+totalSlides)%totalSlides;
+  const track=document.getElementById('carousel-track');
+  if(track)track.style.transform='translateX(-'+(currentSlide*(100/totalSlides))+'%)';
+  document.querySelectorAll('#carousel-dots .carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===currentSlide));
+}
+function nextSlide(){goToSlide(currentSlide+1);}
+function prevSlide(){goToSlide(currentSlide-1);}
+function resetTimer(){clearInterval(autoTimer);if(totalSlides>1)autoTimer=setInterval(nextSlide,4500);}
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+function startDate(t){
+  if(!t)return '';
+  const M=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+  const yearM=t.match(/20\d\d/);
+  const year=yearM?yearM[0]:'';
+  const tokens=[...t.matchAll(/[0-9]+|[a-zàâäéèêëîïôöûüçA-ZÀÂÄÉÈÊËÎÏÔÖÛÜÇ]+/g)];
+  let mi=-1,month='';
+  for(let i=0;i<tokens.length;i++){const w=tokens[i][0].toLowerCase();if(M.includes(w)){mi=i;month=w;break;}}
+  if(mi<0)return t;
+  let day='';
+  if(mi>0&&/^\d{1,2}$/.test(tokens[mi-1][0])){let k=mi-1;while(k>0&&/^\d{1,2}$/.test(tokens[k-1][0])&&/^\s*[–—\-&]\s*$/.test(t.slice(tokens[k-1].index+tokens[k-1][0].length,tokens[k].index)))k--;day=tokens[k][0];}
+  let out=(day?day+' ':'')+month+(year?' '+year:'');
+  return out.charAt(0).toUpperCase()+out.slice(1);
+}
+function hasMonth(s){var toks=(s||'').toLowerCase().match(/[0-9]+|[a-zàâäéèêëîïôöûüç]+/g)||[];for(var i=0;i<toks.length;i++)if(MONTHS.indexOf(toks[i])>=0)return true;return false;}
+function actuCaption(t){
+  if(!t)return '';
+  var sd=startDate(t);
+  var segs=t.split('·').map(function(s){return s.trim();}).filter(Boolean);
+  var loc=segs.filter(function(s){
+    if(hasMonth(s)&&/\d/.test(s))return false;
+    if(/^(sortie|création|creation)$/i.test(s))return false;
+    if(/^dir\.?\s/i.test(s))return false;
+    if(/(tournée|tournee)/i.test(s))return false;
+    return true;
+  });
+  return sd+(loc.length?' · '+loc.join(' · '):'');
+}
+function buildActu(){
+  const track=document.getElementById('carousel-track');
+  if(!track)return;
+  const cards=[...document.querySelectorAll('#grid .projet-card')].filter(c=>isActive(c)&&!c.hasAttribute('data-no-actu')&&(c.dataset.cat!=='saison'||c.querySelector('.projet-pastille')));
+  const dated=cards.map(c=>({c,m:projectMonths(c)})).filter(x=>x.m.size>0);
+  const now=new Date(); const cur=now.getMonth()+1, curY=now.getFullYear(); lastActuMonth=cur-1;
+  const inMonth=(m,y)=>dated.filter(x=>x.m.has(m)&&projectYM(x.c).y===y);
+  let pick=inMonth(cur,curY), label=MONTHS[cur-1], upcoming=false;
+  if(!pick.length){
+    for(let k=1;k<=12;k++){const m=((cur-1+k)%12)+1;const y=curY+(cur+k>12?1:0);const f=inMonth(m,y);if(f.length){pick=f;label=MONTHS[m-1];upcoming=true;break;}}
+  }
+  if(!pick.length)pick=dated;
+  pick.sort((a,b)=>Math.min(...a.m)-Math.min(...b.m));
+  const n=pick.length; totalSlides=n;
+  track.style.width=(n*100)+'%';
+  track.innerHTML=pick.map(x=>{
+    const c=x.c, img=c.querySelector('.projet-img img');
+    const src=img?img.getAttribute('src'):'', alt=img?img.getAttribute('alt'):'';
+    const tag=(c.querySelector('.projet-tag')||{}).textContent||'';
+    const title=(c.querySelector('.projet-name')||{}).textContent||'';
+    const date=actuCaption([...c.querySelectorAll('.projet-detail,.projet-pastille')].map(e=>e.textContent).join(' · '));
+    const url=c.dataset.url||'';
+    return '<div class="carousel-slide"'+(url?' data-url="'+esc(url)+'"':'')+' style="min-width:'+(100/n)+'%">'+
+      (src?'<img class="carousel-img" src="'+esc(src)+'" alt="'+esc(alt)+'" referrerpolicy="no-referrer">':'')+
+      '<div class="carousel-caption"><span class="carousel-tag">'+esc(tag)+'</span>'+
+      '<p class="carousel-title">'+esc(title)+'</p><p class="carousel-date">'+esc(date)+'</p></div></div>';
+  }).join('');
+  const dots=document.getElementById('carousel-dots');
+  if(dots){
+    dots.innerHTML=pick.map((_,i)=>'<button class="carousel-dot'+(i===0?' active':'')+'" aria-label="Slide '+(i+1)+'"></button>').join('');
+    [...dots.children].forEach((b,i)=>b.addEventListener('click',()=>{goToSlide(i);resetTimer();}));
+    dots.style.display=n>1?'':'none';
+  }
+  track.querySelectorAll('.carousel-slide[data-url]').forEach(s=>{s.style.cursor='pointer';s.addEventListener('click',()=>window.open(s.dataset.url,'_blank','noopener'));});
+  const prev=document.querySelector('.carousel-prev'),next=document.querySelector('.carousel-next');
+  if(prev)prev.style.display=n>1?'':'none';
+  if(next)next.style.display=n>1?'':'none';
+  const header=document.getElementById('carousel-header');
+  if(header){const cap=label?label.charAt(0).toUpperCase()+label.slice(1):'';header.textContent=(upcoming?'Prochainement · ':'Actu du mois · ')+cap;}
+  currentSlide=0;goToSlide(0);resetTimer();
+}
+function projectSortKey(card){
+  if(card.dataset.date){const d=card.dataset.date.split('-').map(Number);return d[0]*10000+(d[1]||13)*100+(d[2]||0);}
+  const p=dateParts(cardDateText(card));
+  return (p.year||9999)*10000+(p.month||13)*100+p.day;
+}
+function sortGrid(){
+  const grid=document.getElementById('grid'); if(!grid)return;
+  [...grid.querySelectorAll('.projet-card')].sort((a,b)=>projectSortKey(a)-projectSortKey(b)).forEach(c=>grid.appendChild(c));
+}
+function projectYM(card){
+  if(card.dataset.date){const d=card.dataset.date.split('-').map(Number);return {y:d[0],m:d[1]||0};}
+  const p=dateParts(cardDateText(card));
+  return {y:p.year||9999,m:p.month};
+}
+function buildMonths(onlyKey){
+  const host=document.getElementById('grid-months'); if(!host)return;
+  const cards=[...document.querySelectorAll('#grid .projet-card')].filter(isCurrent);
+  const groups=new Map();
+  cards.forEach(c=>{const o=projectYM(c);const key=o.m?(o.y*100+o.m):999999;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(c);});
+  let keys=[...groups.keys()].sort((a,b)=>a-b);
+  if(onlyKey&&onlyKey!=='tout'){keys=keys.filter(k=>String(k)===String(onlyKey));}
+  const now=new Date(); const curKey=now.getFullYear()*100+(now.getMonth()+1);
+  host.innerHTML='';
+  keys.forEach(key=>{
+    const block=document.createElement('div'); block.className='month-block';
+    let label,year;
+    if(key===999999){label='Dates à préciser';year='';}
+    else{const m=key%100,y=Math.floor(key/100);label=MONTHS[m-1];label=label.charAt(0).toUpperCase()+label.slice(1);year=y;}
+    const isCur=(key===curKey);
+    const head=document.createElement('div');
+    head.className='mb-head'+(isCur?' is-current':'');
+    head.innerHTML='<span class="mb-name">'+esc(label)+'</span>'+(year?'<span class="mb-year">'+year+'</span>':'')+(isCur?'<span class="mb-now">Mois en cours</span>':'');
+    block.appendChild(head);
+    const g=document.createElement('div'); g.className='mb-grid';
+    groups.get(key).forEach(orig=>{
+      const c=orig.cloneNode(true);
+      c.classList.add('visible');
+      if(c.dataset.url){c.style.cursor='pointer';c.addEventListener('click',()=>window.open(c.dataset.url,'_blank','noopener'));}
+      c.querySelectorAll('.img-credit').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();b.classList.toggle('expanded');}));
+      g.appendChild(c);
+    });
+    block.appendChild(g);
+    host.appendChild(block);
+  });
+}
+function buildTousSubfilters(){
+  const row=document.getElementById('tous-subfilters'); if(!row)return;
+  const cards=[...document.querySelectorAll('#grid .projet-card')].filter(isCurrent);
+  const keySet=new Set();
+  cards.forEach(c=>{const o=projectYM(c);keySet.add(o.m?(o.y*100+o.m):999999);});
+  const keys=[...keySet].sort((a,b)=>a-b);
+  const monthYears={};
+  keys.forEach(k=>{if(k!==999999){const m=k%100,y=Math.floor(k/100);(monthYears[m]=monthYears[m]||new Set()).add(y);}});
+  const now=new Date(); const curKey=now.getFullYear()*100+(now.getMonth()+1);
+  if(tousSub===null){tousSub=keySet.has(curKey)?String(curKey):'tout';}
+  if(tousSub!=='tout'&&!keySet.has(+tousSub)){tousSub='tout';}
+  let html='<button class="subfilter-btn'+(tousSub==='tout'?' active':'')+'" data-sub="tout">Tout</button>';
+  keys.forEach(k=>{
+    let lab;
+    if(k===999999)lab='À préciser';
+    else{const m=k%100,y=Math.floor(k/100);lab=MONTHS[m-1];lab=lab.charAt(0).toUpperCase()+lab.slice(1);if(monthYears[m]&&monthYears[m].size>1)lab+=' '+y;}
+    const cur=(k===curKey)?' is-now':'';
+    html+='<button class="subfilter-btn'+cur+(String(k)===String(tousSub)?' active':'')+'" data-sub="'+k+'">'+esc(lab)+'</button>';
+  });
+  row.innerHTML=html;
+  row.querySelectorAll('.subfilter-btn').forEach(btn=>btn.addEventListener('click',()=>{tousSub=btn.dataset.sub;buildTousSubfilters();applyFilter('tous');}));
+}
+window.addEventListener('load',()=>{refreshActiveSeasons();syncSeasonLabels();buildSeasonSwitch();sortGrid();buildActu();applyFilter('tous');setInterval(()=>{if(new Date().getMonth()!==lastActuMonth){refreshActiveSeasons();syncSeasonLabels();buildSeasonSwitch();buildActu();tousSub=null;applyFilter(activeFilter());}},3600000);});
+
+// ─── FILTRES PROJETS ───
+// Saisons déclarées, de la plus récente à la plus ancienne.
+// Chaque saison bascule automatiquement en archives au 1er septembre de son année de fin.
+// La saison en cours (ALL_SEASONS[0]) reste toujours active.
+const ALL_SEASONS=['2026-2027','2025-2026'];
+const CURRENT_SEASON=ALL_SEASONS[0];
+const ARCHIVE_MONTH=8; // 0-indexé : 8 = septembre
+let ACTIVE_SEASONS=ALL_SEASONS.slice();
+let viewSeason=CURRENT_SEASON;
+let archiveSub='tout';
+let tousSub=null;
+function seasonStart(s){const m=(s||'').match(/(\d{4})/);return m?+m[1]:0;}
+function seasonEnd(s){const m=(s||'').match(/\d{4}-(\d{4})/);return m?+m[1]:seasonStart(s);}
+function refreshActiveSeasons(){
+  const now=new Date();
+  ACTIVE_SEASONS=ALL_SEASONS.filter(s=>s===CURRENT_SEASON||now<new Date(seasonEnd(s),ARCHIVE_MONTH,1));
+  if(ACTIVE_SEASONS.indexOf(viewSeason)<0){viewSeason=CURRENT_SEASON;archiveSub='tout';tousSub=null;}
+  return ACTIVE_SEASONS;
+}
+function oldestActive(){return ACTIVE_SEASONS[ACTIVE_SEASONS.length-1]||CURRENT_SEASON;}
+function cardSeason(c){return c.dataset.season||CURRENT_SEASON;}
+function isActive(c){return ACTIVE_SEASONS.indexOf(cardSeason(c))>=0;}
+function isCurrent(c){return cardSeason(c)===viewSeason;}
+function isArchived(c){return !isActive(c);}
+function seasonLabel(s){return (s||'').replace('-','\u2013');}
+function seasonShort(s){const m=(s||'').match(/\d{2}(\d{2})-\d{2}(\d{2})/);return m?m[1]+'/'+m[2]:seasonLabel(s);}
+function activeFilter(){const b=document.querySelector('.filter-btn.active');return b?b.dataset.filter:'tous';}
+function syncSeasonLabels(){document.querySelectorAll('[data-season-label]').forEach(el=>el.textContent=seasonLabel(viewSeason));}
+function buildSeasonSwitch(){
+  const row=document.getElementById('season-switch'); if(!row)return;
+  if(ACTIVE_SEASONS.length<2){row.innerHTML='';row.dataset.solo='1';row.style.display='none';return;}
+  row.dataset.solo='';
+  row.innerHTML='<span class="season-switch-label">Saison</span>'+ACTIVE_SEASONS.map((s,i)=>'<button class="season-btn'+(s===viewSeason?' active':'')+'" data-season="'+s+'">'+seasonShort(s)+(i===0?'<span class="sb-tag">En cours</span>':'')+'</button>').join('');
+  row.querySelectorAll('.season-btn').forEach(btn=>btn.addEventListener('click',()=>{
+    viewSeason=btn.dataset.season;
+    tousSub=null;
+    buildSeasonSwitch();
+    syncSeasonLabels();
+    applyFilter(activeFilter());
+  }));
+}
+const SUBFILTERS={
+  disque:{el:'disque-subfilters',sub:'tout'},
+  orchestre:{el:'orchestre-subfilters',sub:'tout'},
+  saison:{el:'saison-subfilters',sub:'tout'}
+};
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    if(f==='archives')archiveSub='tout';
+    if(SUBFILTERS[f]){
+      SUBFILTERS[f].sub='tout';
+      const row=document.getElementById(SUBFILTERS[f].el);
+      if(row)row.querySelectorAll('.subfilter-btn').forEach(b=>b.classList.toggle('active',b.dataset.sub==='tout'));
+    }
+    applyFilter(f);
+  });
+});
+document.querySelectorAll('.subfilters').forEach(row=>{
+  const cat=row.dataset.cat;
+  row.querySelectorAll('.subfilter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      row.querySelectorAll('.subfilter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      if(SUBFILTERS[cat])SUBFILTERS[cat].sub=btn.dataset.sub;
+      applyFilter(cat);
+    });
+  });
+});
+const CAT_NOTES={};
+function buildArchiveSubfilters(){
+  const row=document.getElementById('archives-subfilters');
+  if(!row)return [];
+  const cards=[...document.querySelectorAll('#grid .projet-card')];
+  const seasons=[...new Set(cards.filter(isArchived).map(c=>c.dataset.season))].sort((a,b)=>seasonStart(b)-seasonStart(a));
+  row.innerHTML='<button class="subfilter-btn'+(archiveSub==='tout'?' active':'')+'" data-sub="tout">Tout</button>'+
+    seasons.map(s=>'<button class="subfilter-btn'+(archiveSub===s?' active':'')+'" data-sub="'+s+'">Saison '+seasonLabel(s)+'</button>').join('');
+  row.querySelectorAll('.subfilter-btn').forEach(btn=>btn.addEventListener('click',()=>{archiveSub=btn.dataset.sub;buildArchiveSubfilters();applyFilter('archives');}));
+  return seasons;
+}
+function applyFilter(f){
+  const grid=document.getElementById('grid'); if(!grid)return;
+  const sw=document.getElementById('season-switch'); if(sw)sw.style.display=(f==='archives'||sw.dataset.solo==='1')?'none':'';
+  Object.values(SUBFILTERS).forEach(s=>{const el=document.getElementById(s.el);if(el)el.classList.remove('show');});
+  const arch=document.getElementById('archives-subfilters'); if(arch)arch.classList.remove('show');
+  const tousRow=document.getElementById('tous-subfilters'); if(tousRow)tousRow.classList.remove('show');
+  const cards=[...grid.querySelectorAll('.projet-card')];
+  sortGrid();
+  const note=document.getElementById('orchestre-note');
+  if(note)note.style.display='none';
+  const monthsHost=document.getElementById('grid-months');
+  if(f==='tous'){
+    const trow=document.getElementById('tous-subfilters'); if(trow)trow.classList.add('show');
+    buildTousSubfilters();
+    if(monthsHost){buildMonths(tousSub);monthsHost.style.display='';}
+    grid.style.display='none';
+    return;
+  }
+  if(monthsHost)monthsHost.style.display='none';
+  grid.style.display='';
+  if(f==='archives'){
+    if(arch)arch.classList.add('show');
+    const hasArch=cards.some(isArchived);
+    buildArchiveSubfilters();
+    cards.forEach(c=>c.style.display=(isArchived(c)&&(archiveSub==='tout'||c.dataset.season===archiveSub))?'':'none');
+    if(note&&!hasArch){note.textContent='Aucune archive pour le moment — la saison '+seasonLabel(oldestActive())+' y basculera au 1er septembre '+seasonEnd(oldestActive())+'.';note.style.display='block';}
+    return;
+  }
+  const conf=SUBFILTERS[f];
+  if(conf){
+    const el=document.getElementById(conf.el); if(el)el.classList.add('show');
+    cards.forEach(c=>{const al=(c.dataset.also||'').split(':');if(al[0]===f&&isCurrent(c)&&(conf.sub===al[1]||(conf.sub==='tout'&&c.dataset.cat!==f&&!c.hasAttribute('data-also-strict')))){c.style.display='';return;}c.style.display=(isCurrent(c)&&c.dataset.cat===f&&(conf.sub==='tout'?(f!=='saison'||c.hasAttribute('data-no-actu')):c.dataset.sub===conf.sub))?'':'none';});
+    if(conf&&note&&CAT_NOTES[f]&&CAT_NOTES[f][conf.sub]){note.textContent=CAT_NOTES[f][conf.sub];note.style.display='block';}
+  } else {
+    cards.forEach(c=>c.style.display=(isCurrent(c)&&(f==='tous'||c.dataset.cat===f))?'':'none');
+  }
+}
+
+// ─── LIENS VERS LES SITES DES PROJETS ───
+document.querySelectorAll('#grid .projet-card[data-url]').forEach(card=>{
+  card.addEventListener('click',()=>window.open(card.dataset.url,'_blank','noopener'));
+});
+document.querySelectorAll('.img-credit').forEach(b=>{
+  b.addEventListener('click',e=>{e.stopPropagation();e.preventDefault();b.classList.toggle('expanded');});
+});
+
+// ─── ESPACE PRESSE ───
+const CODE='presse2026';
+function checkPwd(){
+  const val=document.getElementById('pwd').value.trim();
+  if(val===CODE){
+    document.getElementById('press-login').style.display='none';
+    document.getElementById('press-content').style.display='block';
+    window.scrollTo({top:0,behavior:'instant'});
+    setTimeout(observeFadeUps,30);
+  }else{
+    document.getElementById('pwd-err').classList.add('show');
+    document.getElementById('pwd').value='';
+  }
+}
+const EP_PHOTOS={
+ 'durliat':{title:'Gabriel Durliat — kit photos',files:[{f:'durliat-01.jpeg',c:"Thomas O'Brien"},{f:'durliat-02.jpeg',c:"Thomas O'Brien"},{f:'durliat-03.jpeg',c:"Thomas O'Brien"},{f:'durliat-cover.jpg',c:'Pochette · Scala Music'}]},
+ 'theatrons':{title:'THÉÂTRONS 2026 — kit photos',files:[{f:'theatrons-01.jpg',c:'Crédit à préciser'}]},
+ 'insula':{title:'Insula orchestra & accentus — kit photos',files:[
+  {f:'insula-01.jpg',c:'Irmeli Jung'},{f:'insula-02.jpg',c:'Julien Benhamou'},{f:'insula-03.jpg',c:'Crédit à préciser'},
+  {f:'insula-04.png',c:'Irmeli Jung'},{f:'insula-05.jpg',c:'Julien Benhamou'},{f:'insula-06.jpg',c:'Julien Benhamou'},{f:'insula-07.jpg',c:'Patrick Messina'},{f:'insula-08.jpg',c:'Julien Benhamou'}]},
+ 'croq-musique':{title:"Les Dimanches Croq'Musique — kit photos",files:[
+  {f:'croq-01.jpg',c:'Caroline Doutre'},{f:'croq-02.jpg',c:'Caroline Doutre'},{f:'croq-03.jpg',c:'Caroline Doutre'},{f:'croq-04.jpg',c:'Caroline Doutre'}]}
+};
+const EP_DOCS={
+ 'theatrons':{title:'THÉÂTRONS 2026 — dossiers presse',files:[{f:'Dossier-THEATRONS-2026-note-intention-programme.pdf',t:'Dossier · note d\'intention & programme'}]},
+ 'insula':{title:'Insula orchestra & accentus — dossiers presse',files:[
+  {f:'CP-Insula-septembre-2026.pdf',t:'Communiqué de presse · septembre 2026'},
+  {f:'Insula-camerata-septembre-2026.pdf',t:'Insula camerata · septembre 2026'},
+  {f:'CP-Insula-Presentation-de-saison-26-27.pdf',t:'Communiqué · présentation de saison 26-27'}]}
+};
+function openDocs(key){
+  const d=EP_DOCS[key];if(!d)return;
+  document.getElementById('ep-gal-title').textContent=d.title;
+  document.getElementById('ep-gal-grid').className='ep-doclist';
+  document.getElementById('ep-gal-grid').innerHTML=d.files.map(x=>'<a href="presse/'+x.f+'" target="_blank" rel="noopener">'+x.t+'<em>'+(x.x||'PDF')+' ↓</em></a>').join('');
+  document.getElementById('ep-gal').classList.add('show');
+}
+function openGal(key){
+  document.getElementById('ep-gal-grid').className='ep-gal-grid';
+  const g=EP_PHOTOS[key];if(!g)return;
+  document.getElementById('ep-gal-title').textContent=g.title;
+  document.getElementById('ep-gal-grid').innerHTML=g.files.map(p=>'<figure class="ep-gal-item"><a href="presse/photos/'+key+'/'+p.f+'" download><img src="presse/photos/'+key+'/'+p.f+'" alt=""><span>↓ Télécharger</span></a><figcaption>© '+p.c+'</figcaption></figure>').join('');
+  document.getElementById('ep-gal').classList.add('show');
+}
+function closeGal(){document.getElementById('ep-gal').classList.remove('show');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeGal();});
+function logout(){
+  const pwd=document.getElementById('pwd');if(pwd)pwd.value='';
+  const err=document.getElementById('pwd-err');if(err)err.classList.remove('show');
+  showPage('home');
+}
+
+// ─── FORMULAIRE CONTACT ───
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('form-success').classList.add('show');
+  document.getElementById('contact-form').reset();
+  setTimeout(()=>document.getElementById('form-success').classList.remove('show'),4500);
+}
+function subscribePresse(e){
+  e.preventDefault();
+  const s=document.getElementById('ep-sub-success');
+  if(s)s.classList.add('show');
+  e.target.querySelector('.ep-sub-input').value='';
+  setTimeout(()=>{if(s)s.classList.remove('show');},5000);
+}
+
+// ─── ANIMATIONS SCROLL ───
+let io;
+function observeFadeUps(){
+  if(io)io.disconnect();
+  io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+  },{threshold:.05,rootMargin:'0px 0px -20px 0px'});
+  requestAnimationFrame(()=>{
+    const vh=window.innerHeight||document.documentElement.clientHeight;
+    document.querySelectorAll('.page.active .fade-up:not(.visible)').forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.top<vh&&r.bottom>0){el.classList.add('visible');}else{io.observe(el);}
+    });
+  });
+  setTimeout(()=>{document.querySelectorAll('.page.active .fade-up:not(.visible)').forEach(el=>el.classList.add('visible'));},800);
+}
+window.addEventListener('load',observeFadeUps);
+document.addEventListener('DOMContentLoaded',observeFadeUps);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')logout();});
+</script>
+
+<!-- ─── TWEAKS PANEL ─── -->
+<div id="tweaks-root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="app.jsx"></script>
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#ece3d2"/>
+  <rect x="48" y="48" width="304" height="304" fill="#edcf98"/>
+  <text x="200" y="212" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-style="italic" font-size="230" fill="#C4A84F" text-anchor="middle" dominant-baseline="central">Z</text>
+</svg>
+</template>
+</body>
+</html>
