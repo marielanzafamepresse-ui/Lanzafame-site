@@ -879,7 +879,7 @@ footer{padding:1.6rem 2.5rem;border-top:1px solid var(--sand);display:flex;align
             <p class="projet-pastille">2 – 5 octobre 2026</p>
           </div>
         </div>
-        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-actu-months="10" data-date="2026-09-30" data-url="https://theatre-lacriee.com/programmation/evenements/ma-pensee-creuse">
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-also="theatre:criee" data-actu-months="10" data-date="2026-09-30" data-url="https://theatre-lacriee.com/programmation/evenements/ma-pensee-creuse">
           <div class="projet-img"><img src="assets/theatre-ma-pensee-creuse.jpg" alt="Ma pensée creuse" style="object-position:50% 40%"><span class="img-credit" title="© Camille Lemonnier"><span class="ic-txt">Camille Lemonnier</span></span></div>
           <div class="projet-info">
             <p class="projet-tag">Théâtre</p>
@@ -900,7 +900,7 @@ footer{padding:1.6rem 2.5rem;border-top:1px solid var(--sand);display:flex;align
             <p class="projet-pastille">16 octobre 2026</p>
           </div>
         </div>
-        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-actu-months="3" data-date="2027-03-10" data-url="https://theatre-lacriee.com/programmation/evenements/la-rive">
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-also="theatre:criee" data-actu-months="3" data-date="2027-03-10" data-url="https://theatre-lacriee.com/programmation/evenements/la-rive">
           <div class="projet-img"><img src="assets/criee-la-rive.png" alt="La Rive — Louise Vignaud" style="object-position:50% 40%"></div>
           <div class="projet-info">
             <p class="projet-tag">Théâtre</p>
@@ -910,7 +910,7 @@ footer{padding:1.6rem 2.5rem;border-top:1px solid var(--sand);display:flex;align
             <p class="projet-pastille">10 – 19 mars 2027</p>
           </div>
         </div>
-        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-actu-months="1" data-date="2027-01-05" data-url="https://theatre-lacriee.com/programmation/evenements/lecole-des-femmes-2627">
+        <div data-season="2026-2027" class="projet-card fade-up" data-cat="saison" data-sub="criee" data-also="theatre:criee" data-actu-months="1" data-date="2027-01-05" data-url="https://theatre-lacriee.com/programmation/evenements/lecole-des-femmes-2627">
           <div class="projet-img"><img src="assets/theatre-ecole-des-femmes.jpg" alt="L'École des femmes" style="object-position:60% 55%"><span class="img-credit" title="© Geoffrey Posada Serguier"><span class="ic-txt">Geoffrey Posada Serguier</span></span></div>
           <div class="projet-info">
             <p class="projet-tag">Théâtre</p>
@@ -2357,7 +2357,7 @@ function applyFilter(f){
     cards.forEach(c=>{const al=(c.dataset.also||'').split(':');if(al[0]===f&&isCurrent(c)&&(conf.sub===al[1]||(conf.sub==='tout'&&c.dataset.cat!==f&&!c.hasAttribute('data-also-strict')))){c.style.display='';return;}c.style.display=(isCurrent(c)&&c.dataset.cat===f&&(conf.sub==='tout'?((f!=='saison'&&f!=='danse')||c.hasAttribute('data-no-actu')):c.dataset.sub===conf.sub))?'':'none';});
     if(conf&&note&&CAT_NOTES[f]&&CAT_NOTES[f][conf.sub]){note.textContent=CAT_NOTES[f][conf.sub];note.style.display='block';}
   } else {
-    cards.forEach(c=>c.style.display=(isCurrent(c)&&(f==='tous'||c.dataset.cat===f))?'':'none');
+    cards.forEach(c=>c.style.display=(isCurrent(c)&&(f==='tous'||c.dataset.cat===f||(c.dataset.also||'').split(':')[0]===f))?'':'none');
   }
 }
 
