@@ -2172,6 +2172,7 @@ function buildActu(){
   currentSlide=0;goToSlide(0);resetTimer();
 }
 function projectSortKey(card){
+  if(card.hasAttribute('data-no-actu')&&card.dataset.cat==='danse')return 0;
   if(card.dataset.date){const d=card.dataset.date.split('-').map(Number);return d[0]*10000+(d[1]||13)*100+(d[2]||0);}
   const p=dateParts(cardDateText(card));
   return (p.year||9999)*10000+(p.month||13)*100+p.day;
